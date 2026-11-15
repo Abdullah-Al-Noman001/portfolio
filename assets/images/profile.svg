@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Profile photo placeholder">
+  <!-- Replace this file with a real photo (see README.md -> Replace your photo) -->
+  <defs>
+    <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="0.5" stop-color="#06b6d4"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="#0b0d14"/>
+  <circle cx="200" cy="200" r="158" fill="none" stroke="url(#pg)" stroke-width="3" opacity="0.45"/>
+  <circle cx="200" cy="200" r="126" fill="none" stroke="url(#pg)" stroke-width="1.5" opacity="0.22"/>
+  <!-- person silhouette -->
+  <circle cx="200" cy="170" r="52" fill="#161a28" stroke="#2a3048" stroke-width="2"/>
+  <path d="M96 332 C96 258 304 258 304 332 Z" fill="#161a28" stroke="#2a3048" stroke-width="2"/>
+  <!-- initials on the body -->
+  <text x="200" y="308" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" fill="url(#pg)" letter-spacing="6">AN</text>
+  <text x="200" y="376" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#9aa1b5" letter-spacing="4">PROFILE PHOTO - REPLACE ME</text>
+</svg>

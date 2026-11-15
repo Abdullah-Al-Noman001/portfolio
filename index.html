@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ================= SEO ================= -->
+  <title>Abdullah Al Noman — Aspiring Software Engineer | Game Developer</title>
+  <meta name="description" content="Portfolio of Abdullah Al Noman, a Software Engineering student at Daffodil International University passionate about Web Development, Game Development and AI.">
+  <meta name="author" content="Abdullah Al Noman">
+  <meta name="theme-color" content="#06070b">
+
+  <!-- Open Graph (used by Facebook, LinkedIn, Discord...) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Abdullah Al Noman — Aspiring Software Engineer | Game Developer">
+  <meta property="og:description" content="Software Engineering student at Daffodil International University. Web Development, Game Development and AI.">
+  <!-- [FILL ME] after deploying: replace with the FULL URL, e.g. https://yourname.github.io/portfolio/assets/images/og-image.png -->
+  <meta property="og:image" content="assets/images/og-image.png">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Abdullah Al Noman — Aspiring Software Engineer | Game Developer">
+  <meta name="twitter:description" content="Software Engineering student at Daffodil International University. Web Development, Game Development and AI.">
+  <meta name="twitter:image" content="assets/images/og-image.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <!-- ONE Google Font (falls back to system fonts when offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Keyboard users can jump straight to the content -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Fixed decorative / utility layers -->
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__bar" id="scrollProgressBar"></div></div>
+  <div class="noise-overlay" id="noiseOverlay" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-inner container" aria-label="Primary">
+      <a href="#home" class="logo" aria-label="Abdullah Al Noman — home">Noman<span class="logo__accent">.dev</span></a>
+
+      <!-- Desktop links (rendered from js/data.js) -->
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#education">Education</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+      </ul>
+
+      <a class="btn btn--primary btn--sm nav-cta" id="navCta" href="#contact">Contact</a>
+
+      <!-- Hamburger (mobile only) — morphs into an X -->
+      <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Full-screen mobile menu (slides in from the right, filled by js/main.js) -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <ul class="mobile-links" id="mobileLinks"></ul>
+    <div class="mobile-menu-foot">
+      <div class="hero-socials" id="mobileSocials"></div>
+      <p class="mobile-menu-location">DSC, Savar, Dhaka, Bangladesh</p>
+    </div>
+  </nav>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home" aria-label="Introduction">
+      <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+      <!-- Floating CSS wireframe shapes -->
+      <div class="hero-shapes" aria-hidden="true">
+        <span class="shape shape--sq1"></span>
+        <span class="shape shape--sq2"></span>
+        <span class="shape shape--circle"></span>
+        <span class="shape shape--tri"></span>
+      </div>
+
+      <!-- Static fallback content below; replaced by js/main.js from js/data.js -->
+      <div class="container hero-inner" id="heroContent">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name gradient-text">Abdullah Al Noman</h1>
+        <p class="hero-typing">I'm exploring <span class="typing-text" id="typingText">Web Development</span><span class="type-cursor" aria-hidden="true"></span></p>
+        <p class="hero-tagline">Aspiring Software Engineer | Game Developer</p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="#projects">View My Work</a>
+          <a class="btn btn--secondary" href="#contact">Get In Touch</a>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-socials">
+            <a class="social-link" href="https://www.facebook.com/AbdullahA1N0man/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a class="social-link" href="https://www.linkedin.com/in/abdullah-a1-noman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+            <a class="social-link" href="https://github.com/Abdullah-Al-Noman001" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
+          </div>
+          <span class="hero-location"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>DSC, Savar, Dhaka, Bangladesh</span>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#about" aria-label="Scroll down to the About section"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about" data-section="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-label">Get To Know</p>
+          <h2 class="section-title" id="about-title">About Me</h2>
+          <span class="section-title-bar" aria-hidden="true"></span>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-photo">
+            <div class="photo-glow" aria-hidden="true"></div>
+            <div class="photo-frame glass-card">
+              <img src="assets/images/profile.svg" alt="Portrait of Abdullah Al Noman" width="400" height="400" loading="lazy">
+            </div>
+            <span class="photo-badge"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>Daffodil International University</span>
+          </div>
+
+          <div class="about-text">
+            <p>Software engineering student at Daffodil International University, driven to create impactful and innovative solutions. Interested in Web Development, Game Development, and AI. Committed to continuous learning, collaboration, and a growth mindset. Eager to contribute to real-world projects.</p>
+            <ul class="about-facts">
+              <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><strong>Location:</strong> DSC, Savar, Dhaka, Bangladesh</span></li>
+              <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg><span><strong>University:</strong> Daffodil International University</span></li>
+              <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span><strong>Program:</strong> B.Sc. in Software Engineering</span></li>
+            </ul>
+            <div class="about-actions">
+              <a class="btn btn--secondary" id="cvButton" href="#" download><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download CV</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 stat cards (rendered from js/data.js, animated counters) -->
+        <div class="stats-grid" id="statsGrid">
+          <div class="stat-item">
+            <div class="stat-card glass-card">
+              <div class="icon-tile icon-tile--indigo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+              <span class="stat-value gradient-text">7+</span>
+              <p class="stat-label">Programming Languages</p>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-card glass-card">
+              <div class="icon-tile icon-tile--cyan"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91 0z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
+              <span class="stat-value stat-value--placeholder">[FILL ME]</span>
+              <p class="stat-label">Projects</p>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-card glass-card">
+              <div class="icon-tile icon-tile--purple"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
+              <span class="stat-value stat-value--placeholder">[FILL ME]</span>
+              <p class="stat-label">Certifications</p>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-card glass-card">
+              <div class="icon-tile icon-tile--indigo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <span class="stat-value stat-value--placeholder">[FILL ME]</span>
+              <p class="stat-label">Years of Learning</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section" id="skills" data-section="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-label">What I Work With</p>
+          <h2 class="section-title" id="skills-title">My Skills</h2>
+          <span class="section-title-bar" aria-hidden="true"></span>
+        </header>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Static fallback; replaced by js/main.js -->
+          <div class="skill-item">
+            <div class="skill-card glass-card">
+              <div class="skill-head">
+                <div class="icon-tile icon-tile--indigo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                <div class="skill-head-text"><h3>Programming</h3><p>Languages I use for problem solving, DSA practice and building logic.</p></div>
+              </div>
+              <ul class="badges"><li class="badge">C</li><li class="badge">C++</li><li class="badge">C#</li><li class="badge">Python</li><li class="badge">Java</li></ul>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-card glass-card">
+              <div class="skill-head">
+                <div class="icon-tile icon-tile--cyan"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                <div class="skill-head-text"><h3>Web Development</h3><p>Building responsive, interactive web pages from scratch.</p></div>
+              </div>
+              <ul class="badges"><li class="badge">HTML</li><li class="badge">CSS</li><li class="badge">JavaScript</li></ul>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-card glass-card">
+              <div class="skill-head">
+                <div class="icon-tile icon-tile--purple"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="10" rx="5"/><line x1="7" y1="11" x2="7" y2="13"/><line x1="6" y1="12" x2="8" y2="12"/><circle cx="16" cy="13" r="1"/><circle cx="18" cy="11" r="1"/></svg></div>
+                <div class="skill-head-text"><h3>Game Development</h3><p>Developing 2D and 3D games with Unity.</p></div>
+              </div>
+              <ul class="badges"><li class="badge">Unity (2D/3D)</li></ul>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-card glass-card">
+              <div class="skill-head">
+                <div class="icon-tile icon-tile--indigo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                <div class="skill-head-text"><h3>Tools &amp; Workflow</h3><p>Everyday tools for writing, versioning and publishing code.</p></div>
+              </div>
+              <ul class="badges"><li class="badge">Git</li><li class="badge">GitHub</li><li class="badge">VS Code</li></ul>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-card glass-card">
+              <div class="skill-head">
+                <div class="icon-tile icon-tile--cyan"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+                <div class="skill-head-text"><h3>AI &amp; Machine Learning</h3><p>Fields I am actively exploring and learning.</p></div>
+              </div>
+              <ul class="badges"><li class="badge">Machine Learning</li><li class="badge">Deep Learning</li><li class="badge">AI</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="section" id="education" data-section="education" aria-labelledby="education-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-label">My Journey</p>
+          <h2 class="section-title" id="education-title">Education</h2>
+          <span class="section-title-bar" aria-hidden="true"></span>
+        </header>
+
+        <div class="timeline" id="timeline">
+          <!-- Static fallback; replaced by js/main.js -->
+          <article class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-card glass-card">
+              <div class="timeline-top">
+                <span class="chip chip--period">2021</span>
+                <span class="chip chip--result">GPA 5.00</span>
+              </div>
+              <h3>SSC — Secondary School Certificate</h3>
+              <p class="timeline-org">Bogura Cantonment Public School and College</p>
+              <p class="timeline-desc">Completed the Secondary School Certificate examination with a perfect GPA of 5.00.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-card glass-card">
+              <div class="timeline-top">
+                <span class="chip chip--period">2023</span>
+                <span class="chip chip--result">GPA 5.00</span>
+              </div>
+              <h3>HSC — Higher Secondary Certificate</h3>
+              <p class="timeline-org">Govt Azizul Haque College, Bogura</p>
+              <p class="timeline-desc">Completed the Higher Secondary Certificate examination with a perfect GPA of 5.00.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-dot is-current" aria-hidden="true"></span>
+            <div class="timeline-card glass-card">
+              <div class="timeline-top">
+                <span class="chip chip--period">Present</span>
+              </div>
+              <h3>B.Sc. in Software Engineering</h3>
+              <p class="timeline-org">Daffodil International University</p>
+              <p class="timeline-desc">Studying Software Engineering at Daffodil International University.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects" data-section="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-label">My Work</p>
+          <h2 class="section-title" id="projects-title">Featured Projects</h2>
+          <span class="section-title-bar" aria-hidden="true"></span>
+        </header>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Static fallback; replaced by js/main.js -->
+          <div class="project-item">
+            <article class="project-card glass-card">
+              <div class="project-banner project-banner--v1">
+                <span class="project-category">Web Development</span>
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">[FILL ME] Project Title One</h3>
+                <p class="project-desc">[FILL ME] Replace this with 2-3 sentences: what the project does, what you built, and what you learned while building it.</p>
+                <ul class="project-tech"><li class="tech-tag tech-tag--1">HTML</li><li class="tech-tag tech-tag--2">CSS</li><li class="tech-tag tech-tag--3">JavaScript</li></ul>
+                <div class="project-links">
+                  <a class="project-link" href="#" target="_blank" rel="noopener noreferrer"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Demo</a>
+                  <a class="project-link project-link--code" href="#" target="_blank" rel="noopener noreferrer"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="project-item">
+            <article class="project-card glass-card">
+              <div class="project-banner project-banner--v2">
+                <span class="project-category">Game Development</span>
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="10" rx="5"/><line x1="7" y1="11" x2="7" y2="13"/><line x1="6" y1="12" x2="8" y2="12"/><circle cx="16" cy="13" r="1"/><circle cx="18" cy="11" r="1"/></svg>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">[FILL ME] Project Title Two</h3>
+                <p class="project-desc">[FILL ME] Describe your second project here — the goal, the tools you used and the result.</p>
+                <ul class="project-tech"><li class="tech-tag tech-tag--1">Unity</li><li class="tech-tag tech-tag--2">C#</li></ul>
+                <div class="project-links">
+                  <a class="project-link" href="#" target="_blank" rel="noopener noreferrer"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Demo</a>
+                  <a class="project-link project-link--code" href="#" target="_blank" rel="noopener noreferrer"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ================= CERTIFICATIONS ================= -->
+    <section class="section" id="certifications" data-section="certifications" aria-labelledby="certifications-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-label">Proof Of Learning</p>
+          <h2 class="section-title" id="certifications-title">Certifications</h2>
+          <span class="section-title-bar" aria-hidden="true"></span>
+        </header>
+        <div class="cards-grid" id="certificationsGrid">
+          <div class="card-item">
+            <div class="simple-card glass-card">
+              <div class="icon-tile icon-tile--indigo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
+              <div class="simple-card-body">
+                <h3>[FILL ME] Certification Title</h3>
+                <p class="simple-card-meta">[FILL ME] Issuer — e.g. Coursera, freeCodeCamp, Google</p>
+                <div class="simple-card-foot"><span class="chip">[FILL ME] Year</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="simple-card glass-card">
+              <div class="icon-tile icon-tile--cyan"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
+              <div class="simple-card-body">
+                <h3>[FILL ME] Certification Title</h3>
+                <p class="simple-card-meta">[FILL ME] Issuer</p>
+                <div class="simple-card-foot"><span class="chip">[FILL ME] Year</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+    <section class="section" id="achievements" data-section="achievements" aria-labelledby="achievements-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-label">Milestones</p>
+          <h2 class="section-title" id="achievements-title">Achievements</h2>
+          <span class="section-title-bar" aria-hidden="true"></span>
+        </header>
+        <div class="cards-grid" id="achievementsGrid">
+          <div class="card-item">
+            <div class="simple-card glass-card">
+              <div class="icon-tile icon-tile--purple"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4v2a3 3 0 0 0 3 3"/><path d="M17 6h3v2a3 3 0 0 1-3 3"/></svg></div>
+              <div class="simple-card-body">
+                <h3>[FILL ME] Achievement Title</h3>
+                <p class="simple-card-meta">[FILL ME] e.g. contest placement, scholarship, award…</p>
+                <div class="simple-card-foot"><span class="chip">[FILL ME] Year</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="simple-card glass-card">
+              <div class="icon-tile icon-tile--indigo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4v2a3 3 0 0 0 3 3"/><path d="M17 6h3v2a3 3 0 0 1-3 3"/></svg></div>
+              <div class="simple-card-body">
+                <h3>[FILL ME] Achievement Title</h3>
+                <p class="simple-card-meta">[FILL ME] Describe what you achieved and why it matters.</p>
+                <div class="simple-card-foot"><span class="chip">[FILL ME] Year</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ================= ROLES & RESPONSIBILITIES ================= -->
+    <section class="section" id="roles" data-section="roles" aria-labelledby="roles-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-label">Leadership</p>
+          <h2 class="section-title" id="roles-title">Roles &amp; Responsibilities</h2>
+          <span class="section-title-bar" aria-hidden="true"></span>
+        </header>
+        <div class="cards-grid" id="rolesGrid">
+          <div class="card-item">
+            <div class="simple-card glass-card">
+              <div class="icon-tile icon-tile--cyan"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <div class="simple-card-body">
+                <h3>[FILL ME] Role Title</h3>
+                <p class="simple-card-meta">[FILL ME] Club / community / department</p>
+                <div class="simple-card-foot"><p class="simple-card-desc">[FILL ME] What were you responsible for?</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="simple-card glass-card">
+              <div class="icon-tile icon-tile--purple"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <div class="simple-card-body">
+                <h3>[FILL ME] Role Title</h3>
+                <p class="simple-card-meta">[FILL ME] Organization</p>
+                <div class="simple-card-foot"><p class="simple-card-desc">[FILL ME] Summarize your duties and impact.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ================= EXPERIENCE & ACTIVITIES ================= -->
+    <section class="section" id="experience" data-section="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-label">Getting Involved</p>
+          <h2 class="section-title" id="experience-title">Experience &amp; Activities</h2>
+          <span class="section-title-bar" aria-hidden="true"></span>
+        </header>
+        <div class="cards-grid" id="experienceGrid">
+          <div class="card-item">
+            <div class="simple-card glass-card">
+              <div class="icon-tile icon-tile--indigo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+              <div class="simple-card-body">
+                <h3>[FILL ME] Position / Activity</h3>
+                <p class="simple-card-meta">[FILL ME] Organization</p>
+                <div class="simple-card-foot"><span class="chip">[FILL ME] Period</span><p class="simple-card-desc">[FILL ME] What did you do and learn?</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="simple-card glass-card">
+              <div class="icon-tile icon-tile--cyan"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+              <div class="simple-card-body">
+                <h3>[FILL ME] Position / Activity</h3>
+                <p class="simple-card-meta">[FILL ME] Organization</p>
+                <div class="simple-card-foot"><span class="chip">[FILL ME] Period</span><p class="simple-card-desc">[FILL ME] Describe your contribution.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ================= INTERESTS ================= -->
+    <section class="section" id="interests" data-section="interests" aria-labelledby="interests-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-label">Beyond Code</p>
+          <h2 class="section-title" id="interests-title">Interests &amp; Hobbies</h2>
+          <span class="section-title-bar" aria-hidden="true"></span>
+        </header>
+        <div class="interests-grid" id="interestsGrid">
+          <div class="interest-item">
+            <div class="interest-card glass-card">
+              <div class="icon-tile icon-tile--indigo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+              <h3>Machine Learning</h3>
+              <p>Exploring how machines learn from data.</p>
+            </div>
+          </div>
+          <div class="interest-item">
+            <div class="interest-card glass-card">
+              <div class="icon-tile icon-tile--cyan"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+              <h3>Deep Learning</h3>
+              <p>Curious about neural networks and their possibilities.</p>
+            </div>
+          </div>
+          <div class="interest-item">
+            <div class="interest-card glass-card">
+              <div class="icon-tile icon-tile--purple"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+              <h3>Artificial Intelligence</h3>
+              <p>Following the latest in AI and how it shapes software.</p>
+            </div>
+          </div>
+          <div class="interest-item">
+            <div class="interest-card glass-card">
+              <div class="icon-tile icon-tile--indigo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+              <h3>[FILL ME] Hobby</h3>
+              <p>[FILL ME] e.g. Football, chess, photography…</p>
+            </div>
+          </div>
+          <div class="interest-item">
+            <div class="interest-card glass-card">
+              <div class="icon-tile icon-tile--cyan"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+              <h3>[FILL ME] Hobby</h3>
+              <p>[FILL ME] Add anything you enjoy doing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact" data-section="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-label">Contact</p>
+          <h2 class="section-title" id="contact-title">Get In Touch</h2>
+          <span class="section-title-bar" aria-hidden="true"></span>
+          <p class="section-intro" id="contactIntro">Have a question, an opportunity, or just want to say hi? My inbox is always open — I'll get back to you as soon as I can.</p>
+        </header>
+
+        <div class="contact-grid">
+          <!-- Contact info (rendered from js/data.js) -->
+          <div class="contact-info glass-card" id="contactInfo">
+            <h3>Contact Information</h3>
+            <div class="contact-line">
+              <div class="icon-tile icon-tile--indigo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><p class="contact-line-label">Email</p><a class="contact-line-value" href="mailto:abdullahspacebd@gmail.com">abdullahspacebd@gmail.com</a></div>
+            </div>
+            <div class="contact-line">
+              <div class="icon-tile icon-tile--cyan"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><p class="contact-line-label">Location</p><p class="contact-line-value">DSC, Savar, Dhaka, Bangladesh</p></div>
+            </div>
+            <div class="contact-line">
+              <div class="icon-tile icon-tile--purple"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div>
+              <div><p class="contact-line-label">University</p><p class="contact-line-value">Daffodil International University</p></div>
+            </div>
+            <div class="contact-socials">
+              <a class="social-link" href="https://www.facebook.com/AbdullahA1N0man/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+              <a class="social-link" href="https://www.linkedin.com/in/abdullah-a1-noman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+              <a class="social-link" href="https://github.com/Abdullah-Al-Noman001" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
+            </div>
+          </div>
+
+          <!-- Contact form -->
+          <form class="contact-form glass-card" id="contactForm" novalidate>
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required aria-describedby="nameError">
+              <span class="form-error" id="nameError" aria-live="polite"></span>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" autocomplete="email" required aria-describedby="emailError">
+              <span class="form-error" id="emailError" aria-live="polite"></span>
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here…" required aria-describedby="messageError"></textarea>
+              <span class="form-error" id="messageError" aria-live="polite"></span>
+            </div>
+
+            <!-- Honeypot: hidden from humans, tempting for spam bots -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="gotcha">Leave this field empty</label>
+              <input type="text" id="gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Send Message</button>
+
+            <p class="form-fallback" id="formFallback" hidden>Prefer email? <a id="mailtoLink" href="#">Send me an email directly</a> instead.</p>
+            <noscript><p class="form-note">This form needs JavaScript to submit. Please reach out on social media instead.</p></noscript>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="logo" aria-label="Back to top of page">Noman<span class="logo__accent">.dev</span></a>
+          <p class="footer-tagline">Aspiring Software Engineer | Game Developer</p>
+        </div>
+        <ul class="footer-links" id="footerLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="footer-socials" id="footerSocials">
+          <a class="social-link" href="https://www.facebook.com/AbdullahA1N0man/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a class="social-link" href="https://www.linkedin.com/in/abdullah-a1-noman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <a class="social-link" href="https://github.com/Abdullah-Al-Noman001" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear">2026</span> Abdullah Al Noman. All rights reserved.</p>
+        <p class="footer-built" id="footerBuilt">Built with plain HTML, CSS &amp; vanilla JavaScript — no frameworks.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="toast__icon" id="toastIcon"></span>
+    <p class="toast__message" id="toastMessage"></p>
+  </div>
+
+  <!-- All content lives in js/data.js; js/main.js renders everything -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
