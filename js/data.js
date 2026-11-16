@@ -80,7 +80,7 @@ const PORTFOLIO_DATA = {
     photoAlt: "Portrait of Abdullah Al Noman",
     // [FILL ME] put your CV in assets/cv/ and set the path, e.g.
     //           "assets/cv/Abdullah_Al_Noman_CV.pdf"
-    cvUrl: "[FILL ME]",
+    cvUrl: "assets/cv/Abdullah_Al_Noman_CV.pdf",
     paragraphs: [
       "I'm a Software Engineering student who enjoys understanding how things work under the hood and turning that curiosity into code. I'm drawn to problem-solving, systems, and game development, and I learn best by building. My goal is to become a well-rounded software engineer who creates reliable, practical software—from applications to games.",
     ],
