@@ -456,3 +456,12 @@ it was performed.
   static and needs a form backend for direct submissions.
 - **Checks performed:** Reviewed the no-ID and send-failure fallback paths,
   confirmed the footer has no tagline element, and ran `git diff --check`.
+
+### 2026-11-16 — Rewrite project README
+
+- **Changes:** Replaced the maintenance checklist-style README with a
+  project-focused overview covering the portfolio, featured projects,
+  technologies, local run instructions, deployment, contact form behavior, and
+  project structure.
+- **Checks performed:** Reviewed README links and documented commands and ran
+  `git diff --check`.
