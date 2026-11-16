@@ -47,3 +47,4 @@ Changes to the portfolio are recorded here.
 - Changed the tagline separator to a vertical bar, reduced its font size slightly, and made the profile portrait smaller and circular.
 - Updated the “I’m exploring” typing loop with Web Development, Game Development, Software Development, AI & Machine Learning, Competitive Programming, and Research & Development.
 - Removed the “DSC” prefix from all location labels; the location now reads “Savar, Dhaka, Bangladesh.”
+- Removed README references to SETUP.md, clarified Formspree submission and email-draft behavior, and documented the missing direct-submission endpoint as a current challenge.

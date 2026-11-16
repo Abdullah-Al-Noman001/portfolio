@@ -106,8 +106,12 @@ Areas still awaiting real content include:
   reachable; their URLs came from GitHub repository metadata.
 - Additional certificates beyond the current recent selection, activities,
   and some interests.
-- Formspree form ID and any remaining profile/contact facts that the owner
-  wants to publish.
+- **Current challenge — Contact form delivery:** The site is hosted on static
+  GitHub Pages and has no configured Formspree form ID. Form validation works,
+  but the site cannot deliver submissions directly until an endpoint is set.
+  Without that endpoint, submit opens a prefilled email draft for the visitor
+  to send manually. This preserves a usable fallback without implying that
+  GitHub Pages can process form posts on its own.
 - Deployment-specific social preview URL in the HTML metadata.
 
 Search both `js/data.js` and `index.html` for `[FILL ME]` before publishing.
@@ -465,3 +469,11 @@ it was performed.
   project structure.
 - **Checks performed:** Reviewed README links and documented commands and ran
   `git diff --check`.
+
+### 2026-11-16 — Clarify contact form challenge and README behavior
+
+- **Changes:** Removed README references to `SETUP.md`. Explained the Formspree
+  direct-submission path and the prefilled email-draft fallback. Recorded the
+  unconfigured Formspree endpoint as a current contact-form delivery challenge.
+- **Checks performed:** Searched the README to confirm it no longer mentions
+  `SETUP.md`, reviewed the contact behavior wording, and ran `git diff --check`.

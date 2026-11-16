@@ -43,11 +43,11 @@ Then visit [http://localhost:8000](http://localhost:8000).
 
 ## Deploy
 
-The portfolio is a static site and is hosted with GitHub Pages. To publish updates, push changes to the configured branch and Pages will serve the repository's site files. See [SETUP.md](SETUP.md) for GitHub Pages, Netlify, and Vercel instructions.
+The portfolio is a static site hosted with GitHub Pages. Updates are published from the repository's configured Pages branch.
 
 ## Contact Form
 
-GitHub Pages does not process form submissions itself. The form needs a Formspree form ID in `js/data.js` for direct website submissions. Until that is configured, submitting the form opens a prefilled message in the visitor's default email app; the visitor must send it from there. See [SETUP.md](SETUP.md) for setup instructions.
+The form validates the visitor's name, email, and message, then sends the submission to Formspree when a form ID is configured in `js/data.js`. GitHub Pages is static and cannot process form submissions by itself. While the Formspree ID is unset, submitting the form opens a prefilled email draft; the visitor must send it from their email app.
 
 ## Project Structure
 
@@ -60,11 +60,10 @@ assets/images/                  Profile photo and site images
 assets/certificates/             PDF certificates
 assets/images/certificates/     Image certificates
 README.md                       Project overview
-SETUP.md                        Local setup, deployment, and contact form guide
 DEVELOPMENT_REPORT.md            Architecture notes and dated development log
 CHANGELOG.md                    Concise change history
 ```
 
 ## Updating Content
 
-Most portfolio content is in `js/data.js`. Update the matching data entry and keep the corresponding static fallback in `index.html` synchronized. Change visual styles in `css/style.css`. See the templates in `js/data.js` and the deployment and editing guide in [SETUP.md](SETUP.md).
+Most portfolio content is in `js/data.js`. Update the matching data entry and keep the corresponding static fallback in `index.html` synchronized. Change visual styles in `css/style.css`. See the templates at the bottom of `js/data.js`.
