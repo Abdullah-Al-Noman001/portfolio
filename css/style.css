@@ -1228,6 +1228,13 @@ body.menu-open { overflow: hidden; }   /* lock page scroll while menu is open */
   grid-template-columns: 1fr;
   gap: 1.4rem;
 }
+.certifications-note {
+  max-width: 700px;
+  margin: -0.5rem auto 1.4rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.6;
+}
 .simple-card {
   display: flex;
   align-items: flex-start;
@@ -1248,7 +1255,13 @@ body.menu-open { overflow: hidden; }   /* lock page scroll while menu is open */
   margin-top: 0.45rem;
 }
 
-@media (min-width: 768px) { .cards-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 768px) {
+  .cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1100px) {
+  #certificationsGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
 
 /* ==========================================================================
    14. INTERESTS

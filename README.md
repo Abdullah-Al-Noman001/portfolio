@@ -10,10 +10,10 @@ A dark, modern, glassmorphism portfolio website built with **plain HTML, CSS and
 - Single-page portfolio with anchor navigation, sticky glass navbar and scrollspy
 - Hero with an animated particle canvas (dots + connecting lines + mouse parallax), floating CSS wireframe shapes and a typing effect
 - About section with 4 floating stat cards and animated counters
-- Skills as glass cards with hover-lifting badges
+- Six skills cards separating programming, web projects, problem solving, software engineering foundations, tools, and current learning
 - Education timeline with gradient center line, alternating items and a pulsing "current" dot
 - Projects grid with 3D tilt-on-hover cards, colored tech tags and demo/code links
-- Certifications, Achievements, Roles & Responsibilities, Experience/Activities, Interests sections — all placeholder-ready
+- Recent Certificates, plus placeholder-ready Achievements, Roles & Responsibilities, Experience/Activities, and Interests sections
 - Contact form with client-side validation, honeypot spam protection, configurable Formspree submission, and a mailto fallback (configure the form ID in `js/data.js`)
 - Custom cursor (dot + trailing ring), noise overlay, scroll progress bar, scroll reveal, toasts, back-to-top
 - Mobile-first responsive design (tested at 360px, 768px, 1280px), reduced-motion support, no-JS fallback
@@ -137,9 +137,9 @@ Search `js/data.js` for `[FILL ME]` and replace each one. Currently waiting for:
 
 - student ID and section, profile photo, CV file, Formspree ID, and the
   deployment URL used in the social-preview metadata
-- entries for Certifications, Achievements, Roles & Responsibilities, Work Experience/Activities, and Hobbies
+- any further certificates to add when available, plus entries for Achievements, Roles & Responsibilities, Work Experience/Activities, and Hobbies
 
-The summary cards currently show **10+ repositories, 6+ personal projects, 2+ collaborative projects, and 4+ years of learning**. These totals were supplied by Abdullah; keep them accurate as they grow. The Projects section currently showcases the public [BS Card Game Bluff Tracker](https://github.com/Abdullah-Al-Noman001/bs-card-game-bluff-tracker) repository. Its public README documents the project and stack; add more project cards as details are ready, and add a live-demo URL only after confirming the page is published.
+The summary cards currently show **10+ repositories, 6+ personal projects, 2+ collaborative projects, and 4+ years of learning**. These totals were supplied by Abdullah; keep them accurate as they grow. The Projects section features the [BS Card Game Bluff Tracker](https://github.com/Abdullah-Al-Noman001/bs-card-game-bluff-tracker) ([live demo](https://abdullah-al-noman001.github.io/bs-card-game-bluff-tracker/)), [Daily Habit Tracker](https://github.com/Abdullah-Al-Noman001/activity-tracker) ([live demo](https://abdullah-al-noman001.github.io/activity-tracker/)), [Space Relics 3D](https://github.com/Abdullah-Al-Noman001/space-relics-3d_V2), and [Bangladesh Monopoly](https://github.com/Abdullah-Al-Noman001/Bangla_monopoly). Space Relics is described as a team project for NASA Space Apps Challenge 2026, and Bangladesh Monopoly as a collaboration with a friend, based on Abdullah's information.
 
 ## Deployment
 

@@ -114,32 +114,38 @@ const PORTFOLIO_DATA = {
     {
       icon: "code",
       title: "Programming",
-      description: "Languages I use for problem solving, DSA practice and building logic.",
-      items: ["C", "C++", "C#", "Python", "Java"],
+      description: "Core languages from coursework and practice, plus JavaScript used in my browser projects.",
+      items: ["C", "C++", "Java", "JavaScript"],
     },
     {
       icon: "globe",
       title: "Web Development",
-      description: "Building responsive, interactive web pages from scratch.",
-      items: ["HTML", "CSS", "JavaScript", "localStorage"],
+      description: "Building interactive browser apps with HTML, CSS, and JavaScript.",
+      items: ["HTML", "CSS", "DOM & Events", "localStorage", "JSON & File APIs"],
     },
     {
-      icon: "gamepad",
-      title: "Game Development",
-      description: "Developing 2D and 3D games with Unity.",
-      items: ["Unity (2D/3D)"],
+      icon: "layers",
+      title: "Problem Solving & Game Logic",
+      description: "Applying algorithms and rules to track game states and calculate outcomes.",
+      items: ["Data Structures & Algorithms", "Probability & Combinatorics", "Game-State Modeling", "Input Validation", "Settlement Calculations"],
+    },
+    {
+      icon: "book",
+      title: "Software Engineering Foundations",
+      description: "Coursework in requirements, analysis, databases, and system design.",
+      items: ["Requirements & SRS", "SDLC", "System Analysis & Design", "SQL & Relational Databases", "Computer Systems"],
     },
     {
       icon: "wrench",
       title: "Tools & Workflow",
-      description: "Everyday tools for writing, versioning and publishing code.",
+      description: "Using version control and project documentation to manage and share my work.",
       items: ["Git", "GitHub", "VS Code"],
     },
     {
       icon: "cpu",
-      title: "AI & Machine Learning",
-      description: "Fields I am actively exploring and learning.",
-      items: ["Machine Learning", "Deep Learning", "AI"],
+      title: "Currently Learning",
+      description: "Building foundations in game development and operating systems.",
+      items: ["C#", "Unity (2D/3D)", "Operating Systems"],
     },
   ],
 
@@ -175,7 +181,7 @@ const PORTFOLIO_DATA = {
   ],
 
   /* ------------------------------------------------------------------
-     PROJECTS — cards for projects with public details available.
+     PROJECTS — selected personal and collaborative projects.
      image (optional): set e.g. "assets/images/project-placeholder.svg"
      to use a picture banner instead of the gradient + icon banner.
      ------------------------------------------------------------------ */
@@ -184,30 +190,64 @@ const PORTFOLIO_DATA = {
       title: "BS Card Game Bluff Tracker",
       category: "Browser Game Companion",
       icon: "gamepad",
-      description: "A browser-based companion for the BS (Bullshit) card game. Track players' hands, cards in the pile, and claimed ranks while estimating bluff probability from the plays recorded. The current game is saved in this browser with localStorage.",
+      description: "A browser-based companion for the BS (Bullshit) card game. Track 2–10 players' hands, log rank claims, estimate bluff probability from known cards and plays, resolve challenges, and save the current game in the browser.",
       tech: ["HTML", "CSS", "JavaScript", "localStorage"],
-      demoUrl: "",
+      demoUrl: "https://abdullah-al-noman001.github.io/bs-card-game-bluff-tracker/",
       codeUrl: "https://github.com/Abdullah-Al-Noman001/bs-card-game-bluff-tracker",
+    },
+    {
+      title: "Daily Habit Tracker",
+      category: "Personal Project",
+      icon: "layers",
+      description: "A lightweight habit tracker for adding, renaming, and removing habits, logging daily progress, and reviewing a 16-week history with per-habit and combined activity heatmaps. Supports JSON backup and restore, with data saved in the browser.",
+      tech: ["HTML", "CSS", "JavaScript", "localStorage", "JSON", "File API"],
+      demoUrl: "https://abdullah-al-noman001.github.io/activity-tracker/",
+      codeUrl: "https://github.com/Abdullah-Al-Noman001/activity-tracker",
+    },
+    {
+      title: "Space Relics 3D — Solar System Explorer",
+      category: "Collaborative Project",
+      icon: "globe",
+      description: "Built with my team for NASA Space Apps Challenge 2026, this interactive 3D Solar System explorer connects planets with spacecraft and missions. It includes a 1962–2031 timeline, procedural 3D hardware models, and a NASA-filtered dataset.",
+      tech: ["Next.js", "React", "Three.js", "React Three Fiber", "Drei"],
+      demoUrl: "https://space-relics-3d-two.vercel.app/",
+      codeUrl: "https://github.com/Abdullah-Al-Noman001/space-relics-3d_V2",
+    },
+    {
+      title: "Bangladesh Monopoly",
+      category: "Collaborative Game",
+      icon: "gamepad",
+      description: "I collaborated with a friend on this Bangladesh-themed, real-time multiplayer Monopoly-style game. It features local landmarks, BDT currency, localized Luck and Public Fund cards, property management, and player trading.",
+      tech: ["React", "TypeScript", "Node.js", "Express", "Socket.IO", "Tailwind CSS"],
+      demoUrl: "https://arghor-monopoly.vercel.app/",
+      codeUrl: "https://github.com/Abdullah-Al-Noman001/Bangla_monopoly",
     },
   ],
 
   /* ------------------------------------------------------------------
-     CERTIFICATIONS — [FILL ME] placeholders for now
+     CERTIFICATIONS — verified certificate details
      ------------------------------------------------------------------ */
   certifications: [
     {
       icon: "award",
-      title: "[FILL ME] Certification Title",
-      issuer: "[FILL ME] Issuer — e.g. Coursera, freeCodeCamp, Google",
-      year: "[FILL ME] Year",
-      link: "#", // optional: link to the certificate page (remove or set "#" if none)
+      title: "Galactic Problem Solver",
+      issuer: "NASA Space Apps Challenge",
+      year: "Nov 2026",
+      link: "assets/images/certificates/nasa-space-apps-2026.jpg",
     },
     {
       icon: "award",
-      title: "[FILL ME] Certification Title",
-      issuer: "[FILL ME] Issuer",
-      year: "[FILL ME] Year",
-      link: "#",
+      title: "Computer Architecture",
+      issuer: "Saylor University",
+      year: "Apr 2026",
+      link: "assets/certificates/computer-architecture-certificate.pdf",
+    },
+    {
+      icon: "award",
+      title: "SQL Server Foundations Course",
+      issuer: "ScholarHat",
+      year: "Apr 2026",
+      link: "assets/certificates/lab-certificate.pdf",
     },
   ],
 
@@ -284,10 +324,10 @@ const PORTFOLIO_DATA = {
      ------------------------------------------------------------------ */
   sections: {
     about:          { label: "Get To Know",     title: "About Me" },
-    skills:         { label: "What I Work With", title: "My Skills" },
+    skills:         { label: "Skills & Learning", title: "My Skills" },
     education:      { label: "My Journey",      title: "Education" },
     projects:       { label: "My Work",         title: "Featured Projects" },
-    certifications: { label: "Proof Of Learning", title: "Certifications" },
+    certifications: { label: "Proof Of Learning", title: "Recent Certificates" },
     achievements:   { label: "Milestones",      title: "Achievements" },
     roles:          { label: "Leadership",      title: "Roles & Responsibilities" },
     experience:     { label: "Getting Involved", title: "Experience & Activities" },
@@ -362,7 +402,7 @@ const PORTFOLIO_ICONS = {
    ============================================================================
 
    ---- Add a NAV LINK (inside nav: [ ... ]) ----
-   { label: "Certifications", href: "#certifications" },
+   { label: "Recent Certificates", href: "#certifications" },
 
    ---- Add a SOCIAL LINK (inside socials: [ ... ]) ----
    { name: "Twitter", icon: "x", url: "https://x.com/yourhandle" },

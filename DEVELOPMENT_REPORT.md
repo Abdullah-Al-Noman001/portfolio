@@ -52,10 +52,12 @@ content or structure may need corresponding changes in both `js/data.js` and
   rotating typing line.
 - About section, profile image, editable fact rows, and animated statistic
   cards.
-- Skills grouped into editable cards and an education timeline.
+- Skills grouped into six editable cards that distinguish project experience,
+  coursework foundations, tools, and current learning; plus an education
+  timeline.
 - Project cards, technology tags, and hover tilt.
-- Placeholder-ready certifications, achievements, roles, activities, and
-  interests sections.
+- A Recent Certificates section, plus placeholder-ready achievements, roles,
+  activities, and interests sections.
 - Contact form validation, hidden honeypot field, configurable Formspree
   request, and mailto fallback.
 - Scroll reveal, toast messages, back-to-top control, scroll progress,
@@ -88,15 +90,21 @@ other profile sections, contact settings, and footer text. Templates for
 adding entries are included at the bottom of that file.
 
 The current project includes `[FILL ME]` content in both `js/data.js` and the
-static fallback in `index.html`. The public GitHub profile currently exposes
-one repository, the BS Card Game Bluff Tracker; its details have been added to
-the projects section. Areas still awaiting real content include:
+static fallback in `index.html`. The authenticated GitHub repository listing
+contains 10 repositories, including personal project apps, portfolio copies,
+a profile README, and forks. The current Featured Projects section lists the
+BS Card Game Bluff Tracker, Daily Habit Tracker, Space Relics 3D, and Dhoni
+Game. The last two are forks with visible links to their source repositories.
+Areas still awaiting real content include:
 
 - Resume PDF and its configured path; the profile image is currently an SVG
   placeholder.
-- Any additional projects not represented in the public GitHub profile, plus
-  a confirmed live demo URL if one is published.
-- Certifications, achievements, roles, activities, and some interests.
+- Any additional project details the owner wants to feature beyond the four
+  selected cards.
+- Verification that the Space Relics 3D and Dhoni Game demo URLs are currently
+  reachable; their URLs came from GitHub repository metadata.
+- Additional certificates beyond the current recent selection, achievements,
+  roles, activities, and some interests.
 - Formspree form ID and any remaining profile/contact facts that the owner
   wants to publish.
 - Deployment-specific social preview URL in the HTML metadata.
@@ -187,3 +195,110 @@ it was performed.
   that one repository until more project details are provided.
 - **Checks performed:** Reviewed data and static fallback values for
   consistency. No browser or automated tests were run.
+
+### 2026-11-16 — Skills section grounded in profile and projects
+
+- **Goal:** Make the Skills section reflect the profile README and skills
+  demonstrated in the account's original project repositories.
+- **Files changed:** `js/data.js`, `index.html`, `README.md`, `CHANGELOG.md`,
+  and this report.
+- **Changes:** Reorganized the cards as Programming, Web Development,
+  Problem Solving & Game Logic, Software Engineering Foundations, Tools &
+  Workflow, and Currently Learning. Added descriptions and project-relevant
+  badges for DOM/events, local storage, JSON/File APIs, probability, game
+  state, and settlement calculations. Moved JavaScript into Programming to
+  reflect its project use, moved C# and Unity to the learning card, and removed
+  unsupported Python and AI/ML skill claims.
+- **Checks performed:** Compared the data-driven skill cards with the static
+  HTML fallback. No browser or automated tests were run.
+- **Follow-up:** Removed the Markdown Docs badge from Tools & Workflow at the
+  user's request; the card now lists Git, GitHub, and VS Code.
+
+### 2026-11-16 — Featured projects expanded
+
+- **Goal:** Add the Daily Habit Tracker and two requested collaborative
+  projects beside the existing Bluff Tracker.
+- **Files changed:** `js/data.js`, `js/main.js`, `css/style.css`, `index.html`,
+  `README.md`, `CHANGELOG.md`, and this report.
+- **Changes:** Added the Daily Habit Tracker, Space Relics 3D, and Dhoni Game
+  cards with descriptions, technology tags, repository links, and available
+  demo URLs. Synchronized the static HTML fallback.
+- **Evidence limits:** Descriptions and stacks follow the repository READMEs.
+  Demo URLs come from GitHub repository metadata and were not independently
+  verified as reachable. No specific personal contribution details were
+  invented for either collaborative fork.
+- **Checks performed:** Compared the project data and static fallback entries.
+  No browser or automated tests were run.
+
+### 2026-11-16 — Project collaboration details and live demos
+
+- **Goal:** Add the requested deployed links and make collaboration visible in
+  the Space Relics and Bangla Monopoly project cards.
+- **Files changed:** `js/data.js`, `index.html`, `README.md`, `CHANGELOG.md`,
+  and this report.
+- **Changes:** Added the user-provided GitHub Pages URLs to the Bluff Tracker
+  and Daily Habit Tracker cards. Described Space Relics as built with the user's
+  team for NASA Space Apps Challenge 2026 and Bangla Monopoly as a collaboration
+  with a friend. Renamed the latter badge to “Collaborative Game” and removed
+  “Fork” from both category badges. Kept the separate source-repository credits
+  for both projects.
+- **Evidence limits:** Collaboration wording comes from the user. The new demo
+  URLs were supplied by the user and were added as given; their reachability was
+  not independently checked.
+- **Checks performed:** Compared the project data with the static HTML fallback
+  and documentation. No browser or automated tests were run.
+
+### 2026-11-16 — Remove fork labels and add Featured Projects reminder
+
+- **Changes:** Removed the “Forked from” credits from the Space Relics and
+  Dhoni Game cards and data. Updated the README and changelog, and added a
+  changelog reminder to keep Featured Projects current as project details
+  change.
+- **Checks performed:** Confirmed no “Forked from” text remains in the portfolio
+  files and checked the working diff for whitespace issues.
+
+### 2026-11-16 — Recent certificates expanded
+
+- **Changes:** Added the supplied SQL Server Foundations and CS301 Computer
+  Architecture PDFs alongside the 2026 NASA Space Apps Challenge Galactic
+  Problem Solver certificate. Renamed the section and navigation link to
+  “Recent Certificates,” marked the NASA certificate as the latest, centered
+  the certificate cards, and replaced the prior note with a short statement
+  that this is a selection with more to come. Updated the README and changelog.
+- **Files changed:** `assets/certificates/lab-certificate.pdf`,
+  `assets/certificates/computer-architecture-certificate.pdf`,
+  `assets/images/certificates/nasa-space-apps-2026.jpg`, `js/data.js`,
+  `index.html`, `css/style.css`, `README.md`, `CHANGELOG.md`, and this report.
+- **Checks performed:** Visually inspected the two PDF certificates, confirmed
+  all three local certificate links and assets, and checked the diff for
+  whitespace errors. No browser or automated tests were run.
+
+### 2026-11-16 — Simplify certificate dates
+
+- **Changes:** Changed the Computer Architecture and SQL Server certificate
+  date labels to month and year only in the data and static fallback. Logged the
+  update in the changelog.
+- **Checks performed:** Confirmed the old day-specific labels are gone and ran
+  `git diff --check`.
+
+### 2026-11-16 — Restore side-by-side certificate cards
+
+- **Changes:** Removed the “Latest” prefix from the Galactic Problem Solver
+  date. Restored two certificate columns on wider screens and centered the
+  third card beneath them; the cards remain stacked on narrow screens.
+- **Checks performed:** Reviewed the certificate data and responsive CSS and
+  ran `git diff --check`.
+
+### 2026-11-16 — Three certificates in one row
+
+- **Changes:** Set the Recent Certificates grid to three columns on wide
+  screens, keeping the cards responsive at narrower widths. Updated the
+  changelog.
+- **Checks performed:** Reviewed the breakpoint rules and ran `git diff --check`.
+
+### 2026-11-16 — Simplify Computer Architecture certificate title
+
+- **Changes:** Removed “CS301:” from the visible Computer Architecture
+  certificate title while retaining the certificate card and PDF link.
+- **Checks performed:** Confirmed the public-facing title contains no course
+  code, the PDF link remains, and `git diff --check` passes.
