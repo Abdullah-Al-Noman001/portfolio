@@ -1,4 +1,4 @@
-# A.Noman — Personal Portfolio
+# Abdullah Al Noman — Personal Portfolio
 
 I built this portfolio to introduce myself, share the projects I’m working on, and document what I’m learning as a Software Engineering student and game development enthusiast. It includes my skills, education, recent certificates, activities, and ways to get in touch.
 
