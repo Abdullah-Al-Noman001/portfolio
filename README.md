@@ -1,16 +1,16 @@
 # A.Noman — Personal Portfolio
 
-A responsive portfolio for Abdullah Al Noman, a Software Engineering student and game development enthusiast. It brings together selected projects, skills, education, recent certificates, achievements, current activities, and ways to get in touch.
+I built this portfolio to introduce myself, share the projects I’m working on, and document what I’m learning as a Software Engineering student and game development enthusiast. It includes my skills, education, recent certificates, activities, and ways to get in touch.
 
 - **Portfolio:** [abdullah-al-noman001.github.io/portfolio](https://abdullah-al-noman001.github.io/portfolio/)
 - **GitHub:** [github.com/Abdullah-Al-Noman001](https://github.com/Abdullah-Al-Noman001)
 
 ## Featured Projects
 
-- **[BS Card Game Bluff Tracker](https://github.com/Abdullah-Al-Noman001/bs-card-game-bluff-tracker)** — A browser companion for the BS card game, with player hand tracking, claim history, bluff estimates, and saved game state. [Live demo](https://abdullah-al-noman001.github.io/bs-card-game-bluff-tracker/)
-- **[Daily Habit Tracker](https://github.com/Abdullah-Al-Noman001/activity-tracker)** — Track daily habits, review activity heatmaps, and back up or restore data. [Live demo](https://abdullah-al-noman001.github.io/activity-tracker/)
-- **[Space Relics 3D](https://github.com/Abdullah-Al-Noman001/space-relics-3d_V2)** — An interactive Solar System explorer built with a team for NASA Space Apps Challenge 2026, combining 3D models, mission data, and a historical timeline.
-- **[Bangladesh Monopoly](https://github.com/Abdullah-Al-Noman001/Bangla_monopoly)** — A Bangladesh-themed, real-time multiplayer Monopoly-style game developed in collaboration with a friend.
+- **[BS Card Game Bluff Tracker](https://github.com/Abdullah-Al-Noman001/bs-card-game-bluff-tracker)** — I made this browser companion to help track players’ hands and claims during a BS card game, estimate bluffs, and save the game in the browser. [Live demo](https://abdullah-al-noman001.github.io/bs-card-game-bluff-tracker/)
+- **[Daily Habit Tracker](https://github.com/Abdullah-Al-Noman001/activity-tracker)** — A small app I built to log daily habits, review activity heatmaps, and back up or restore data. [Live demo](https://abdullah-al-noman001.github.io/activity-tracker/)
+- **[Space Relics 3D](https://github.com/Abdullah-Al-Noman001/space-relics-3d_V2)** — I worked with my team on this interactive Solar System explorer for NASA Space Apps Challenge 2026. It brings together 3D models, mission data, and a historical timeline.
+- **[Bangladesh Monopoly](https://github.com/Abdullah-Al-Noman001/Bangla_monopoly)** — I collaborated with a friend on this Bangladesh-themed, real-time multiplayer Monopoly-style game.
 
 ## Portfolio Features
 
@@ -43,11 +43,11 @@ Then visit [http://localhost:8000](http://localhost:8000).
 
 ## Deploy
 
-The portfolio is a static site hosted with GitHub Pages. Updates are published from the repository's configured Pages branch.
+I host this static site with GitHub Pages. Updates are published from the repository’s configured Pages branch.
 
 ## Contact Form
 
-The form validates the visitor's name, email, and message, then sends the submission to Formspree when a form ID is configured in `js/data.js`. GitHub Pages is static and cannot process form submissions by itself. While the Formspree ID is unset, submitting the form opens a prefilled email draft; the visitor must send it from their email app.
+The form checks the visitor’s name, email, and message, then sends the submission to Formspree when I configure a form ID in `js/data.js`. GitHub Pages is static and can’t process submissions by itself. Until I set up Formspree, submitting the form opens a prefilled email draft that the visitor can send from their email app.
 
 ## Project Structure
 
