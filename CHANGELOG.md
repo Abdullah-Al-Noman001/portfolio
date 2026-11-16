@@ -14,6 +14,8 @@ Changes to the portfolio are recorded here.
 
 ## 2026-11-16
 
+- Added the approved one-page CV PDF and connected the About section's Download CV button to `assets/cv/Abdullah_Al_Noman_CV.pdf`.
+- Updated the About biography to focus on curiosity, learning by building, and the goal of becoming a well-rounded software engineer.
 - Added the public BS Card Game Bluff Tracker repository to the Projects section, updated the project count and demonstrated web technologies, and kept the static HTML fallback aligned.
 - Updated the README, setup guide, and development report to reflect the verified GitHub project and remaining unknown profile details.
 - Replaced the About statistics with 10+ repositories, 6+ personal projects, 2+ collaborative projects, and 4+ years of learning; added a short line to communicate ongoing growth.

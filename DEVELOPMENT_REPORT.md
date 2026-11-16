@@ -27,7 +27,7 @@ remain visibly marked for future personal content.
 | `js/main.js` | Reads the data object, renders the navigation and page sections, then initializes animations, navigation behavior, contact form, and other interactions. Wrapped in an IIFE; no framework dependency. |
 | `css/style.css` | Design tokens and all component, section, animation, and responsive styles. |
 | `assets/images/` | Favicon variants, social preview image, current profile illustration, and a generic project placeholder. |
-| `assets/cv/` | Intended location for the PDF linked by `about.cvUrl`; the current folder contains usage notes, not a configured resume. |
+| `assets/cv/` | Approved one-page CV PDF linked by `about.cvUrl` for the About section's Download CV button. |
 | `README.md` | Feature summary, file map, and quick customization examples. |
 | `SETUP.md` | Local preview, deployment, Formspree setup, submission checklist, and troubleshooting. |
 | `CHANGELOG.md` | Concise historical list of content and presentation changes. |
@@ -56,6 +56,7 @@ content or structure may need corresponding changes in both `js/data.js` and
   coursework foundations, tools, and current learning; plus an education
   timeline.
 - Project cards, technology tags, and hover tilt.
+- Downloadable one-page CV PDF linked from the About section.
 - Recent Certificates, a recent achievement, Space Relics 3D project roles, a
   research paper and competitive programming under Experience & Activities,
   and populated interests for Machine Learning, Artificial Intelligence,
@@ -99,7 +100,6 @@ BS Card Game Bluff Tracker, Daily Habit Tracker, Space Relics 3D, and Dhoni
 Bangladesh Monopoly.
 Areas still awaiting real content include:
 
-- Resume PDF and its configured path.
 - Any additional project details the owner wants to feature beyond the four
   selected cards.
 - Verification that the Space Relics 3D and Dhoni Game demo URLs are currently
@@ -477,3 +477,19 @@ it was performed.
   unconfigured Formspree endpoint as a current contact-form delivery challenge.
 - **Checks performed:** Searched the README to confirm it no longer mentions
   `SETUP.md`, reviewed the contact behavior wording, and ran `git diff --check`.
+
+### 2026-11-16 — Add approved CV download
+
+- **Goal:** Make the approved, no-photo CV available from the portfolio's
+  Download CV button.
+- **Files changed:** `assets/cv/Abdullah_Al_Noman_CV.pdf`, `js/data.js`,
+  `CHANGELOG.md`, and this report.
+- **Changes:** Added a one-page A4 CV featuring the verified profile, education,
+  skills, selected projects, certificates, and activities. Set `about.cvUrl` to
+  the relative PDF path used by the About section's download link. Updated the
+  biography to emphasize curiosity, learning by building, and the goal of
+  becoming a well-rounded software engineer.
+- **Checks performed:** Confirmed the PDF is one A4 page and visually reviewed
+  its rendered layout. Confirmed the configured CV path points to the added
+  asset. Pushed the CV and link in commit `61fbe87`; this entry records the
+  follow-up documentation update.
