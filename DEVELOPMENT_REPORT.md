@@ -430,3 +430,29 @@ it was performed.
   Bangladesh.” Updated the changelog.
 - **Checks performed:** Searched the workspace for remaining “DSC” location
   references and ran `git diff --check`.
+
+### 2026-11-16 — Move footer tagline to the navigation row
+
+- **Changes:** Removed the tagline from the A.Noman brand stack and placed it
+  as a separate flex item alongside the footer navigation and social links.
+  Added wrapping behavior for narrower screens and reduced the footer tagline
+  size for the single-row layout. Updated the changelog.
+- **Checks performed:** Reviewed the footer markup and responsive styles and ran
+  `git diff --check`.
+
+### 2026-11-16 — Remove footer tagline
+
+- **Changes:** Removed the tagline beside A.Noman from the footer while keeping
+  the hero tagline. Updated the changelog.
+- **Checks performed:** Confirmed the footer no longer has a tagline element and
+  ran `git diff --check`.
+
+### 2026-11-16 — Improve contact form fallback for GitHub Pages
+
+- **Changes:** Kept the tagline in the hero and removed the remaining footer
+  tagline in the static source. When no Formspree ID is configured, the contact
+  form now opens a prefilled email draft with the visitor's name, email, and
+  message. Updated the README and setup guide to explain that GitHub Pages is
+  static and needs a form backend for direct submissions.
+- **Checks performed:** Reviewed the no-ID and send-failure fallback paths,
+  confirmed the footer has no tagline element, and ran `git diff --check`.

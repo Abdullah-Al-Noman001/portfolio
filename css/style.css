@@ -1394,12 +1394,12 @@ body.menu-open { overflow: hidden; }   /* lock page scroll while menu is open */
 .footer-top {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   gap: 1.6rem;
   text-align: center;
 }
-.footer-brand { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
-.footer-tagline { font-size: 0.84rem; color: var(--text-muted); }
+.footer-brand { display: flex; align-items: center; }
 .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem 1.6rem; }
 .footer-links a {
   font-size: 0.92rem;
@@ -1425,7 +1425,7 @@ body.menu-open { overflow: hidden; }   /* lock page scroll while menu is open */
     justify-content: space-between;
     text-align: left;
   }
-  .footer-brand { align-items: flex-start; }
+  .footer-brand { align-items: center; }
   .footer-bottom { flex-direction: row; justify-content: space-between; }
 }
 

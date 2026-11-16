@@ -14,7 +14,7 @@ A dark, modern, glassmorphism portfolio website built with **plain HTML, CSS and
 - Education timeline with gradient center line, alternating items and a pulsing "current" dot
 - Projects grid with 3D tilt-on-hover cards, colored tech tags and demo/code links
 - Recent Certificates, a NASA Space Apps Challenge 2026 achievement, ongoing Competitive Programming and research paper activities, and interests in Machine Learning, Artificial Intelligence, walking, video games, and photography
-- Contact form with client-side validation, honeypot spam protection, configurable Formspree submission, and a mailto fallback (configure the form ID in `js/data.js`)
+- Contact form with client-side validation, honeypot spam protection, configurable Formspree submission, and a prefilled email-draft fallback until the form ID is configured
 - Custom cursor (dot + trailing ring), noise overlay, scroll progress bar, scroll reveal, toasts, back-to-top
 - Mobile-first responsive design (tested at 360px, 768px, 1280px), reduced-motion support, no-JS fallback
 - **Every piece of content lives in one file: `js/data.js`**

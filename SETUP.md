@@ -135,7 +135,13 @@ The contact form needs a free Formspree account (no server of your own):
 How it works: `js/main.js` validates the fields, blocks spam bots with a
 hidden honeypot field, and `fetch()`-POSTs the message as JSON to
 `https://formspree.io/f/<your-id>`. Success shows a green toast; failure
-shows a red toast plus a direct "email me" link.
+shows a red toast and a prefilled email link.
+
+GitHub Pages only hosts the static site; it does not process form submissions
+by itself. Until you add a Formspree ID, submitting the form opens a prefilled
+draft in the visitor's default email app. The visitor still needs to send it
+from that app. Add your Formspree ID above to receive submissions directly
+from the site without relying on the visitor's email app.
 
 ---
 
@@ -218,9 +224,10 @@ folder. Keep the structure intact: `index.html` next to the `css/` and `js/`
 folders. If you see this after deploying, you uploaded the files nested
 inside an extra folder — `index.html` must be at the root.
 
-**The contact form says "not configured yet".**
-`contact.formspreeId` in `js/data.js` still contains `[FILL ME]` — do step 5
-above.
+**The contact form opens an email draft instead of sending directly.**
+`contact.formspreeId` in `js/data.js` still contains `[FILL ME]`. GitHub
+Pages cannot receive form submissions on its own; follow step 5 to connect
+Formspree. Without that ID, the form prepares an email draft for the visitor.
 
 **Images do not show.**
 Check the file name in `js/data.js` matches exactly, including capital

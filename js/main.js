@@ -405,8 +405,6 @@
     }
     var socials = $("#footerSocials");
     if (socials) socials.innerHTML = socialLinksHtml();
-    var tagline = $(".footer-tagline");
-    if (tagline && DATA.hero) tagline.textContent = DATA.hero.tagline || "";
     var built = $("#footerBuilt");
     if (built && DATA.footer) built.textContent = DATA.footer.builtWith || "";
   }
@@ -869,15 +867,21 @@
       });
     });
 
-    function showMailtoFallback() {
+    function showMailtoFallback(values) {
       var fb = $("#formFallback");
       var link = $("#mailtoLink");
       if (!fb || !link) return;
       var email = String((DATA.contact || {}).email || "");
       if (email && email.indexOf("[FILL ME]") === -1) {
+        var subject = values && values.name
+          ? "Portfolio message from " + values.name
+          : "Message from your portfolio site";
+        var body = values
+          ? "Name: " + values.name + "\nEmail: " + values.email + "\n\n" + values.message
+          : "Hi Abdullah,\n\n";
         link.href = "mailto:" + email +
-          "?subject=" + encodeURIComponent("Message from your portfolio site") +
-          "&body=" + encodeURIComponent("Hi Abdullah,\n\n");
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
         link.textContent = "Send me an email directly";
       } else {
         link.href = "#";
@@ -913,8 +917,19 @@
       var formspreeId = String((DATA.contact || {}).formspreeId || "").trim();
       var configured = formspreeId && formspreeId.indexOf("[FILL ME]") === -1;
       if (!configured) {
-        showToast("The contact form is not set up yet — add your Formspree ID in js/data.js (see SETUP.md).", "error");
-        showMailtoFallback();
+        var messageValues = {
+          name: FIELDS.name.el.value.trim(),
+          email: FIELDS.email.el.value.trim(),
+          message: FIELDS.message.el.value.trim()
+        };
+        showMailtoFallback(messageValues);
+        var mailtoLink = $("#mailtoLink");
+        if (mailtoLink && mailtoLink.href.indexOf("mailto:") === 0) {
+          window.location.href = mailtoLink.href;
+          showToast("An email draft is ready. Send it from your email app.", "success");
+        } else {
+          showToast("The contact form needs setup. Please email me directly.", "error");
+        }
         return;
       }
 
@@ -942,7 +957,11 @@
         .catch(function (err) {
           console.warn("[portfolio] contact form error:", err);
           showToast("Something went wrong while sending. Please email me directly.", "error");
-          showMailtoFallback();
+          showMailtoFallback({
+            name: FIELDS.name.el.value.trim(),
+            email: FIELDS.email.el.value.trim(),
+            message: FIELDS.message.el.value.trim()
+          });
         })
         .then(function () {
           submitBtn.disabled = false;

@@ -40,6 +40,9 @@ Changes to the portfolio are recorded here.
 - Replaced the portfolio tagline with “SOFTWARE ENGINEERING STUDENT · PROBLEM SOLVER · GAME DEVELOPMENT ENTHUSIAST,” changed the logo to “A.Noman,” removed the university badge beneath the portrait, and simplified the footer build credit to “Built with HTML, CSS, and JavaScript.”
 - Kept the existing tagline typography and split the logo coloring so “A.” uses the base color and “Noman” uses the existing accent gradient.
 - Removed “Problem Solver” from the tagline and page/social titles.
+- Moved the footer tagline out from under A.Noman and placed it as a separate item on the navigation row.
+- Removed the footer tagline; the hero tagline remains in place.
+- Kept the hero tagline but removed it from the footer, and changed the unconfigured contact form to open a prefilled email draft. Documented that GitHub Pages needs Formspree (or another form backend) for direct submissions.
 - Changed the tagline separator to a vertical bar, reduced its font size slightly, and made the profile portrait smaller and circular.
 - Updated the “I’m exploring” typing loop with Web Development, Game Development, Software Development, AI & Machine Learning, Competitive Programming, and Research & Development.
 - Removed the “DSC” prefix from all location labels; the location now reads “Savar, Dhaka, Bangladesh.”
