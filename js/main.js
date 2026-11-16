@@ -152,9 +152,9 @@
       '<div class="about-photo reveal reveal-scale">' +
         '<div class="photo-glow" aria-hidden="true"></div>' +
         '<div class="photo-frame glass-card">' +
-          '<img src="' + esc(a.photo) + '" alt="' + esc(a.photoAlt) + '" width="400" height="400" loading="lazy">' +
+          '<img src="' + esc(a.photo) + '" alt="' + esc(a.photoAlt) + '" width="1106" height="1390" loading="lazy">' +
         "</div>" +
-        '<span class="photo-badge">' + icon("graduation") + esc(a.photoBadge || "") + "</span>" +
+        (a.photoBadge ? '<span class="photo-badge">' + icon("graduation") + esc(a.photoBadge) + "</span>" : "") +
       "</div>" +
       '<div class="about-text reveal reveal-delay-1">' +
         (a.paragraphs || []).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") +

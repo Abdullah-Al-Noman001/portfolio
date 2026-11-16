@@ -190,7 +190,7 @@ shows a red toast plus a direct "email me" link.
 Run through this before zipping or submitting:
 
 - [ ] Search `js/data.js` for `[FILL ME]` — zero matches left
-- [ ] Real profile photo added to `assets/images/` and set in `about.photo`
+- [x] Profile photo added at `assets/images/profile.png` and set in `about.photo`
 - [ ] CV PDF added to `assets/cv/` and set in `about.cvUrl` (Download CV
       button works)
 - [ ] Formspree ID set in `contact.formspreeId` and a test message received

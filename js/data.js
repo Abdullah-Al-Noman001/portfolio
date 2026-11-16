@@ -21,9 +21,9 @@ const PORTFOLIO_DATA = {
      SITE — browser tab title, logo text
      ------------------------------------------------------------------ */
   site: {
-    title: "Abdullah Al Noman — Aspiring Software Engineer | Game Developer",
-    description: "Portfolio of Abdullah Al Noman, a Software Engineering student at Daffodil International University passionate about Web Development, Game Development and AI.",
-    logo: { text: "Noman", accent: ".dev" }, // navbar / footer brand text
+    title: "Abdullah Al Noman — Software Engineering Student | Game Development Enthusiast",
+    description: "Portfolio of Abdullah Al Noman: Software Engineering student, problem solver, and game development enthusiast.",
+    logo: { text: "A.", accent: "Noman" }, // navbar / footer brand text
   },
 
   /* ------------------------------------------------------------------
@@ -51,12 +51,12 @@ const PORTFOLIO_DATA = {
     typingPhrases: [
       "Web Development",
       "Game Development",
-      "Artificial Intelligence",
-      "C++",
-      "Python",
-      "Unity",
+      "Software Development",
+      "AI & Machine Learning",
+      "Competitive Programming",
+      "Research & Development",
     ],
-    tagline: "Aspiring Software Engineer | Game Developer",
+    tagline: "SOFTWARE ENGINEERING STUDENT | GAME DEVELOPMENT ENTHUSIAST",
     location: "DSC, Savar, Dhaka, Bangladesh",
     primaryButton: { label: "View My Work", href: "#projects" },
     secondaryButton: { label: "Get In Touch", href: "#contact" },
@@ -75,11 +75,9 @@ const PORTFOLIO_DATA = {
      ABOUT — photo, bio, quick facts, CV
      ------------------------------------------------------------------ */
   about: {
-    // [FILL ME] replace with your photo file, e.g. "assets/images/profile.jpg"
-    photo: "assets/images/profile.svg",
+    // Replace this path if you want to use a different profile photo.
+    photo: "assets/images/profile.png",
     photoAlt: "Portrait of Abdullah Al Noman",
-    // Small badge shown at the bottom edge of the photo
-    photoBadge: "Daffodil International University",
     // [FILL ME] put your CV in assets/cv/ and set the path, e.g.
     //           "assets/cv/Abdullah_Al_Noman_CV.pdf"
     cvUrl: "[FILL ME]",
@@ -252,58 +250,52 @@ const PORTFOLIO_DATA = {
   ],
 
   /* ------------------------------------------------------------------
-     ACHIEVEMENTS — [FILL ME] placeholders for now
+     ACHIEVEMENTS — confirmed NASA Space Apps Challenge contribution
      ------------------------------------------------------------------ */
   achievements: [
     {
       icon: "trophy",
-      title: "[FILL ME] Achievement Title",
-      description: "[FILL ME] e.g. contest placement, scholarship, award…",
-      year: "[FILL ME] Year",
-    },
-    {
-      icon: "trophy",
-      title: "[FILL ME] Achievement Title",
-      description: "[FILL ME] Describe what you achieved and why it matters.",
-      year: "[FILL ME] Year",
+      title: "NASA Space Apps Challenge 2026",
+      description: "Participated as part of a team, researched and collected data for Space Relics 3D, and helped build and deploy the interactive Solar System explorer.",
+      year: "2026",
     },
   ],
 
   /* ------------------------------------------------------------------
-     ROLES & RESPONSIBILITIES — [FILL ME] placeholders for now
+     ROLES & RESPONSIBILITIES — Space Relics 3D project contributions
      ------------------------------------------------------------------ */
   roles: [
     {
       icon: "users",
-      title: "[FILL ME] Role Title",
-      org: "[FILL ME] Club / community / department",
-      description: "[FILL ME] What were you responsible for?",
+      title: "Research & Development",
+      org: "NASA Space Apps Challenge 2026 · Space Relics 3D",
+      description: "Researched space missions and collected and organized the data used in the project.",
     },
     {
       icon: "users",
-      title: "[FILL ME] Role Title",
-      org: "[FILL ME] Organization",
-      description: "[FILL ME] Summarize your duties and impact.",
+      title: "Research Paper Contributor",
+      org: "Research Project · In Progress",
+      description: "Currently contributing to a research paper. The manuscript is still in progress and has not been published.",
     },
   ],
 
   /* ------------------------------------------------------------------
-     EXPERIENCE & ACTIVITIES — [FILL ME] placeholders for now
+     EXPERIENCE & ACTIVITIES — current research activity
      ------------------------------------------------------------------ */
   experience: [
     {
       icon: "briefcase",
-      title: "[FILL ME] Position / Activity",
-      org: "[FILL ME] Organization",
-      period: "[FILL ME] Period", // e.g. "Jan 2026 – Present"
-      description: "[FILL ME] What did you do and learn?",
+      title: "Research Paper",
+      org: "Research Project",
+      period: "In Progress",
+      description: "Currently working on a research paper. It is not published yet.",
     },
     {
       icon: "briefcase",
-      title: "[FILL ME] Position / Activity",
-      org: "[FILL ME] Organization",
-      period: "[FILL ME] Period",
-      description: "[FILL ME] Describe your contribution.",
+      title: "Competitive Programming",
+      org: "Ongoing Practice",
+      period: "Ongoing",
+      description: "Practice algorithmic challenges to strengthen problem-solving skills and apply data structures and algorithms.",
     },
   ],
 
@@ -312,10 +304,10 @@ const PORTFOLIO_DATA = {
      ------------------------------------------------------------------ */
   interests: [
     { icon: "cpu", title: "Machine Learning", description: "Exploring how machines learn from data." },
-    { icon: "layers", title: "Deep Learning", description: "Curious about neural networks and their possibilities." },
     { icon: "zap", title: "Artificial Intelligence", description: "Following the latest in AI and how it shapes software." },
-    { icon: "heart", title: "[FILL ME] Hobby", description: "[FILL ME] e.g. Football, chess, photography…" },
-    { icon: "star", title: "[FILL ME] Hobby", description: "[FILL ME] Add anything you enjoy doing." },
+    { icon: "heart", title: "Walking", description: "Enjoying walks as a way to relax and recharge." },
+    { icon: "gamepad", title: "Video Games", description: "Playing video games in my free time." },
+    { icon: "camera", title: "Photography", description: "Capturing moments and exploring photography." },
   ],
 
   /* ------------------------------------------------------------------
@@ -328,7 +320,7 @@ const PORTFOLIO_DATA = {
     education:      { label: "My Journey",      title: "Education" },
     projects:       { label: "My Work",         title: "Featured Projects" },
     certifications: { label: "Proof Of Learning", title: "Recent Certificates" },
-    achievements:   { label: "Milestones",      title: "Achievements" },
+    achievements:   { label: "Milestones",      title: "Recent Achievements" },
     roles:          { label: "Leadership",      title: "Roles & Responsibilities" },
     experience:     { label: "Getting Involved", title: "Experience & Activities" },
     interests:      { label: "Beyond Code",     title: "Interests & Hobbies" },
@@ -353,7 +345,7 @@ const PORTFOLIO_DATA = {
      FOOTER
      ------------------------------------------------------------------ */
   footer: {
-    builtWith: "Built with plain HTML, CSS & vanilla JavaScript — no frameworks.",
+    builtWith: "Built with HTML, CSS, and JavaScript.",
   },
 };
 
@@ -367,6 +359,7 @@ const PORTFOLIO_ICONS = {
   code: '<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>',
   globe: '<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
   gamepad: '<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="10" rx="5"/><line x1="7" y1="11" x2="7" y2="13"/><line x1="6" y1="12" x2="8" y2="12"/><circle cx="16" cy="13" r="1"/><circle cx="18" cy="11" r="1"/></svg>',
+  camera: '<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h-4L8 7H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/></svg>',
   wrench: '<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
   cpu: '<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>',
   layers: '<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>',

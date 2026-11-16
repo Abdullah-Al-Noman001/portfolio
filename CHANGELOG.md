@@ -28,3 +28,17 @@ Changes to the portfolio are recorded here.
 - Removed the “Latest” prefix from the Galactic Problem Solver date and restored the two-column certificate layout, centering the third card on its own row.
 - Set the Recent Certificates grid to display all three cards in one row on wide screens.
 - Renamed the Saylor University certificate from “CS301: Computer Architecture” to “Computer Architecture,” keeping the certificate and its PDF link.
+- Added the NASA Space Apps Challenge 2026 achievement, highlighting the user's research and data collection for Space Relics 3D and contribution to building and deploying the team project. Centered the single achievement card.
+- Renamed the section heading to “Recent Achievements.”
+- Added Research & Development and Software Developer project roles for Space Relics 3D, based on the user's research, data collection, team development, and deployment contributions.
+- Replaced the Software Developer role card with Research Paper Contributor and added the unpublished, in-progress paper to Experience & Activities.
+- Moved Competitive Programming from the skills list to Experience & Activities, where it is shown as ongoing practice alongside the research paper.
+- Updated Interests & Hobbies to keep Machine Learning and Artificial Intelligence and add Walking and Video Games.
+- Added Photography to Interests & Hobbies with a camera icon.
+- Reordered the lower portfolio sections after Featured Projects: Roles & Responsibilities, Experience & Activities, Recent Achievements, Recent Certificates, then Interests & Hobbies.
+- Added the supplied portrait as `assets/images/profile.png` and set it as the About section photo. Updated the setup checklist and README.
+- Replaced the portfolio tagline with “SOFTWARE ENGINEERING STUDENT · PROBLEM SOLVER · GAME DEVELOPMENT ENTHUSIAST,” changed the logo to “A.Noman,” removed the university badge beneath the portrait, and simplified the footer build credit to “Built with HTML, CSS, and JavaScript.”
+- Kept the existing tagline typography and split the logo coloring so “A.” uses the base color and “Noman” uses the existing accent gradient.
+- Removed “Problem Solver” from the tagline and page/social titles.
+- Changed the tagline separator to a vertical bar, reduced its font size slightly, and made the profile portrait smaller and circular.
+- Updated the “I’m exploring” typing loop with Web Development, Game Development, Software Development, AI & Machine Learning, Competitive Programming, and Research & Development.

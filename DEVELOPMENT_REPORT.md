@@ -56,8 +56,10 @@ content or structure may need corresponding changes in both `js/data.js` and
   coursework foundations, tools, and current learning; plus an education
   timeline.
 - Project cards, technology tags, and hover tilt.
-- A Recent Certificates section, plus placeholder-ready achievements, roles,
-  activities, and interests sections.
+- Recent Certificates, a recent achievement, Space Relics 3D project roles, a
+  research paper and competitive programming under Experience & Activities,
+  and populated interests for Machine Learning, Artificial Intelligence,
+  walking, video games, and photography.
 - Contact form validation, hidden honeypot field, configurable Formspree
   request, and mailto fallback.
 - Scroll reveal, toast messages, back-to-top control, scroll progress,
@@ -94,17 +96,16 @@ static fallback in `index.html`. The authenticated GitHub repository listing
 contains 10 repositories, including personal project apps, portfolio copies,
 a profile README, and forks. The current Featured Projects section lists the
 BS Card Game Bluff Tracker, Daily Habit Tracker, Space Relics 3D, and Dhoni
-Game. The last two are forks with visible links to their source repositories.
+Bangladesh Monopoly.
 Areas still awaiting real content include:
 
-- Resume PDF and its configured path; the profile image is currently an SVG
-  placeholder.
+- Resume PDF and its configured path.
 - Any additional project details the owner wants to feature beyond the four
   selected cards.
 - Verification that the Space Relics 3D and Dhoni Game demo URLs are currently
   reachable; their URLs came from GitHub repository metadata.
-- Additional certificates beyond the current recent selection, achievements,
-  roles, activities, and some interests.
+- Additional certificates beyond the current recent selection, activities,
+  and some interests.
 - Formspree form ID and any remaining profile/contact facts that the owner
   wants to publish.
 - Deployment-specific social preview URL in the HTML metadata.
@@ -302,3 +303,122 @@ it was performed.
   certificate title while retaining the certificate card and PDF link.
 - **Checks performed:** Confirmed the public-facing title contains no course
   code, the PDF link remains, and `git diff --check` passes.
+
+### 2026-11-16 — NASA Space Apps Challenge achievement
+
+- **Changes:** Replaced achievement placeholders with the user's participation
+  in NASA Space Apps Challenge 2026, describing their research and data
+  collection for Space Relics 3D and their contribution to building and
+  deploying the project with their team. Centered the single achievement card.
+  Updated the README and changelog.
+- **Checks performed:** Compared the data-driven entry with the static HTML
+  fallback and ran `git diff --check`.
+
+### 2026-11-16 — Rename Recent Achievements section
+
+- **Changes:** Renamed the achievement section heading to “Recent Achievements”
+  in the static page and data-driven section settings; noted this in the changelog.
+- **Checks performed:** Compared both headings and ran `git diff --check`.
+
+### 2026-11-16 — Space Relics 3D project roles
+
+- **Changes:** Added Research & Development and Software Developer entries
+  under Roles & Responsibilities for the NASA Space Apps Challenge 2026 team
+  project, reflecting the user's research, data collection, development, and
+  deployment contributions. Updated the static fallback, README, changelog,
+  and current-state report.
+- **Checks performed:** Compared both role cards with the data entries and ran
+  `git diff --check`.
+
+### 2026-11-16 — Competitive programming and research in progress
+
+- **Changes:** Replaced the Space Relics Software Developer role card with a Research Paper
+  Contributor entry and added the unpublished paper to Experience & Activities
+  with an “In Progress” status. Removed the unused activity placeholder and
+  synchronized the static fallback and
+  updated the README and changelog.
+- **Checks performed:** Compared the skills, role, and activity content in
+  `js/data.js` with `index.html`; ran `git diff --check`.
+
+### 2026-11-16 — List competitive programming as an activity
+
+- **Changes:** Removed Competitive Programming from the skills badges and
+  added it as ongoing practice in Experience & Activities beside the research
+  paper. Returned the two activity cards to the responsive two-column layout.
+  Updated the README and changelog.
+- **Checks performed:** Compared the activity data with the static fallback
+  and ran `git diff --check`.
+
+### 2026-11-16 — Update interests and hobbies
+
+- **Changes:** Kept Machine Learning and Artificial Intelligence, replaced
+  Deep Learning and the hobby placeholders with Walking and Video Games, and
+  synchronized the static page and README.
+- **Checks performed:** Compared interest cards in `js/data.js` and `index.html`
+  and ran `git diff --check`.
+
+### 2026-11-16 — Add Photography interest
+
+- **Changes:** Added Photography to Interests & Hobbies with a camera icon and
+  description. Updated the README and changelog.
+- **Checks performed:** Confirmed the data-driven and static cards match and ran
+  `git diff --check`.
+
+### 2026-11-16 — Reorder portfolio sections
+
+- **Changes:** Moved the sections following Featured Projects into the requested
+  order: Roles & Responsibilities, Experience & Activities, Recent
+  Achievements, Recent Certificates, and Interests & Hobbies. Updated the
+  changelog.
+- **Checks performed:** Verified section order in the static page and ran
+  `git diff --check`.
+
+### 2026-11-16 — Add profile portrait
+
+- **Changes:** Copied the supplied portrait to `assets/images/profile.png` and
+  set it as the About section photo in both the data and static HTML. Updated
+  the README, setup checklist, and changelog.
+- **Checks performed:** Confirmed the image file and both photo paths, and ran
+  `git diff --check`.
+
+### 2026-11-16 — Update portfolio identity and footer copy
+
+- **Changes:** Replaced the hero and footer tagline with the requested three-part
+  descriptor, changed the navbar and footer logo to “A.Noman,” removed the
+  university badge below the portrait, and simplified the built-with line.
+  Updated page title and social preview metadata to match the new descriptor.
+- **Files changed:** `js/data.js`, `js/main.js`, `index.html`, `CHANGELOG.md`,
+  and this report.
+- **Checks performed:** Searched for the old tagline, logo, and footer copy and
+  ran `git diff --check`.
+
+### 2026-11-16 — Restore tagline typography and split logo accent
+
+- **Changes:** Kept the existing tagline font styling and used the existing
+  logo accent gradient on “Noman,” leaving “A.” in the base logo color. Updated
+  the data, static page, and changelog.
+- **Checks performed:** Confirmed both logo instances use the same split styling
+  and ran `git diff --check`.
+
+### 2026-11-16 — Remove Problem Solver tagline phrase
+
+- **Changes:** Removed “Problem Solver” from the hero and footer tagline and
+  aligned the page and social titles with the two remaining descriptors.
+- **Checks performed:** Confirmed the tagline and metadata no longer include the
+  phrase and ran `git diff --check`.
+
+### 2026-11-16 — Refine tagline and profile portrait
+
+- **Changes:** Switched the hero and footer tagline separator to a vertical
+  bar, reduced tagline font sizes slightly, and changed the profile portrait to
+  a smaller circular crop.
+- **Checks performed:** Reviewed the updated copy and responsive photo styles;
+  ran `git diff --check`.
+
+### 2026-11-16 — Update hero typing loop
+
+- **Changes:** Set the rotating “I'm exploring” phrases to Web Development,
+  Game Development, Software Development, AI & Machine Learning, Competitive
+  Programming, and Research & Development. Updated the changelog.
+- **Checks performed:** Compared the configured phrase list with the requested
+  topics and ran `git diff --check`.
