@@ -1,6 +1,6 @@
 # Abdullah Al Noman — Personal Portfolio
 
-A dark, modern, glassmorphism portfolio website built with **plain HTML, CSS and vanilla JavaScript only** — no frameworks, no build step, no npm. Open `index.html` and it runs.
+A dark, modern, glassmorphism portfolio website built with **plain HTML, CSS and vanilla JavaScript only** — no frameworks, no build step, no npm. Open `index.html` and it runs. Portfolio content is maintained in `js/data.js`; `index.html` includes static fallback content for visitors without JavaScript.
 
 - Live site: (add your deployed URL here after following SETUP.md)
 - GitHub: https://github.com/Abdullah-Al-Noman001
@@ -14,14 +14,14 @@ A dark, modern, glassmorphism portfolio website built with **plain HTML, CSS and
 - Education timeline with gradient center line, alternating items and a pulsing "current" dot
 - Projects grid with 3D tilt-on-hover cards, colored tech tags and demo/code links
 - Certifications, Achievements, Roles & Responsibilities, Experience/Activities, Interests sections — all placeholder-ready
-- Contact form with client-side validation, honeypot spam protection and Formspree integration
+- Contact form with client-side validation, honeypot spam protection, configurable Formspree submission, and a mailto fallback (configure the form ID in `js/data.js`)
 - Custom cursor (dot + trailing ring), noise overlay, scroll progress bar, scroll reveal, toasts, back-to-top
 - Mobile-first responsive design (tested at 360px, 768px, 1280px), reduced-motion support, no-JS fallback
 - **Every piece of content lives in one file: `js/data.js`**
 
 ## Tech Stack
 
-HTML, CSS, vanilla JavaScript only. (One optional Google Font with a system fallback; all icons are inline SVG.)
+HTML, CSS, vanilla JavaScript only. The heading font loads from Google Fonts with a system fallback; icons are inline SVG. There is no build or package-install step.
 
 ## Folder Structure
 
@@ -37,12 +37,14 @@ portfolio/
 │   ├── images/           # profile photo, favicon, og-image, project images
 │   └── cv/               # put your CV PDF here
 ├── README.md             # this file
-└── SETUP.md              # local run, deployment, Formspree, submission ZIP
+├── SETUP.md              # local run, deployment, Formspree, submission ZIP
+├── DEVELOPMENT_REPORT.md # architecture, history, known gaps, dated edit log
+└── CHANGELOG.md          # concise dated record of prior content edits
 ```
 
 ## How To Update My Content
 
-Everything you see on the page is rendered from `js/data.js`. Open it, find the section, edit the text between quotes, save, refresh. Copy-paste templates for every item type are at the bottom of that file.
+Most page content is rendered from `js/data.js`. Open it, find the section, edit the text between quotes, save, and refresh the browser (Live Server can refresh automatically). Copy-paste templates for item types are at the bottom of that file. `index.html` contains a static no-JavaScript fallback, so keep that fallback aligned when changing the page's core content or structure.
 
 ### Add a project
 
@@ -133,10 +135,23 @@ Full walkthrough with screenshots-level detail: see `SETUP.md`, step 5.
 
 Search `js/data.js` for `[FILL ME]` and replace each one. Currently waiting for:
 
-- email, student ID, section, profile photo, CV file, Formspree ID
-- the numbers for Projects / Certifications / Years of Learning stat cards
-- entries for Projects, Certifications, Achievements, Roles & Responsibilities, Work Experience/Activities, Hobbies
+- student ID and section, profile photo, CV file, Formspree ID, and the
+  deployment URL used in the social-preview metadata
+- entries for Certifications, Achievements, Roles & Responsibilities, Work Experience/Activities, and Hobbies
+
+The summary cards currently show **10+ repositories, 6+ personal projects, 2+ collaborative projects, and 4+ years of learning**. These totals were supplied by Abdullah; keep them accurate as they grow. The Projects section currently showcases the public [BS Card Game Bluff Tracker](https://github.com/Abdullah-Al-Noman001/bs-card-game-bluff-tracker) repository. Its public README documents the project and stack; add more project cards as details are ready, and add a live-demo URL only after confirming the page is published.
 
 ## Deployment
 
 The site is 100% static. See `SETUP.md` for step-by-step guides: GitHub Pages, Netlify (drag & drop or Git), and Vercel.
+
+## Development history and documentation
+
+See [DEVELOPMENT_REPORT.md](DEVELOPMENT_REPORT.md) for this workspace's
+architecture, known placeholders, prior history, and ongoing dated log. Use
+`CHANGELOG.md` for a short summary of content edits. For each meaningful
+future change, add a report entry with the date, goal, files changed, and
+checks actually run. Update this README and `SETUP.md` whenever features,
+paths, editing steps, or deployment behavior change. The separate
+`portfolio_new/` folder is another portfolio version; it is not part of this
+workspace's root site.

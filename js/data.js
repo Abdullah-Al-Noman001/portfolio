@@ -101,10 +101,10 @@ const PORTFOLIO_DATA = {
      suffix is optional: "+" or "%" etc.
      ------------------------------------------------------------------ */
   stats: [
-    { icon: "code", value: 7, suffix: "+", label: "Programming Languages" },
-    { icon: "rocket", value: "[FILL ME]", suffix: "", label: "Projects" },            // e.g. value: 5
-    { icon: "award", value: "[FILL ME]", suffix: "", label: "Certifications" },      // e.g. value: 3
-    { icon: "clock", value: "[FILL ME]", suffix: "", label: "Years of Learning" },   // e.g. value: 2
+    { icon: "code", value: 10, suffix: "+", label: "Repositories" },
+    { icon: "rocket", value: 6, suffix: "+", label: "Personal Projects" },
+    { icon: "users", value: 2, suffix: "+", label: "Collaborative Projects" },
+    { icon: "clock", value: 4, suffix: "+", label: "Years of Learning" },
   ],
 
   /* ------------------------------------------------------------------
@@ -121,7 +121,7 @@ const PORTFOLIO_DATA = {
       icon: "globe",
       title: "Web Development",
       description: "Building responsive, interactive web pages from scratch.",
-      items: ["HTML", "CSS", "JavaScript"],
+      items: ["HTML", "CSS", "JavaScript", "localStorage"],
     },
     {
       icon: "gamepad",
@@ -175,28 +175,19 @@ const PORTFOLIO_DATA = {
   ],
 
   /* ------------------------------------------------------------------
-     PROJECTS — 2-column grid of cards.
+     PROJECTS — cards for projects with public details available.
      image (optional): set e.g. "assets/images/project-placeholder.svg"
      to use a picture banner instead of the gradient + icon banner.
      ------------------------------------------------------------------ */
   projects: [
     {
-      title: "[FILL ME] Project Title One",
-      category: "Web Development",
-      icon: "globe",
-      description: "[FILL ME] Replace this with 2-3 sentences: what the project does, what you built, and what you learned while building it.",
-      tech: ["HTML", "CSS", "JavaScript"],
-      demoUrl: "#",   // [FILL ME] link to the live demo
-      codeUrl: "#",   // [FILL ME] link to the GitHub repository
-    },
-    {
-      title: "[FILL ME] Project Title Two",
-      category: "Game Development",
+      title: "BS Card Game Bluff Tracker",
+      category: "Browser Game Companion",
       icon: "gamepad",
-      description: "[FILL ME] Describe your second project here — the goal, the tools you used and the result.",
-      tech: ["Unity", "C#"],
-      demoUrl: "#",
-      codeUrl: "#",
+      description: "A browser-based companion for the BS (Bullshit) card game. Track players' hands, cards in the pile, and claimed ranks while estimating bluff probability from the plays recorded. The current game is saved in this browser with localStorage.",
+      tech: ["HTML", "CSS", "JavaScript", "localStorage"],
+      demoUrl: "",
+      codeUrl: "https://github.com/Abdullah-Al-Noman001/bs-card-game-bluff-tracker",
     },
   ],
 

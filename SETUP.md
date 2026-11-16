@@ -22,8 +22,10 @@ ZIP. No prior deployment experience needed.
 5. Your browser opens `http://127.0.0.1:5500`. Every time you save a file,
    the page reloads automatically.
 
-> Tip: edit only `js/data.js` for content changes — the page updates the
-> moment you save.
+> Tip: edit `js/data.js` for most content changes. Live Server refreshes the
+> page after you save; if you opened `index.html` directly, refresh the browser
+> yourself. Keep the static fallback in `index.html` aligned when changing
+> core content or page structure.
 
 ---
 
@@ -37,8 +39,9 @@ ZIP. No prior deployment experience needed.
    - Click **Create repository**.
 3. Upload the files:
    - Easy way: on the new empty repo page click **uploading an existing
-     file**, then drag the CONTENTS of the `portfolio` folder (index.html,
-     css/, js/, assets/, README.md, SETUP.md) into the browser window.
+     file**, then drag the CONTENTS of the portfolio root (`index.html`,
+     `css/`, `js/`, `assets/`, `README.md`, `SETUP.md`,
+     `DEVELOPMENT_REPORT.md`, and `CHANGELOG.md`) into the browser window.
      Important: upload the files themselves, not the portfolio folder —
      `index.html` must sit at the root of the repository.
    - Commit with message "Initial portfolio" and click **Commit changes**.
@@ -175,7 +178,9 @@ shows a red toast plus a direct "email me" link.
    ├── js/main.js
    ├── assets/...
    ├── README.md
-   └── SETUP.md
+   ├── SETUP.md
+   ├── DEVELOPMENT_REPORT.md
+   └── CHANGELOG.md
    ```
 
 ---
@@ -190,13 +195,20 @@ Run through this before zipping or submitting:
       button works)
 - [ ] Formspree ID set in `contact.formspreeId` and a test message received
 - [ ] `contact.email` is your real email
-- [ ] Stat cards filled with real numbers (Projects, Certifications, Years)
-- [ ] Real projects added with working Live Demo / Code links
+- [ ] Summary-card counts (repositories, personal projects, collaborations,
+      years learning) reflect your current totals; the page currently shows
+      10+, 6+, 2+, and 4+
+- [ ] Each listed project has a working Code link; add a Live Demo link only
+      when a published demo URL has been confirmed
 - [ ] All social links open correctly (Facebook, LinkedIn, GitHub)
 - [ ] Open the site on a phone (or 360px wide in DevTools) — no horizontal
       scrolling, mobile menu works
 - [ ] Press F12 > Console — no red errors
 - [ ] Footer year and copyright look right
+- [ ] `README.md`, `SETUP.md`, and `DEVELOPMENT_REPORT.md` match the current
+      project; add a dated report entry for the latest meaningful changes
+- [ ] If zipping from the workspace root, exclude the separate
+      `portfolio_new/` folder; it is a different portfolio version
 
 ## 9. Troubleshooting
 
@@ -232,3 +244,21 @@ it falls back to your system font. That is expected and fine.
 **GitHub Pages shows 404.**
 Wait 1–3 minutes after enabling Pages, make sure the repo is Public, the
 branch is `main`, and the folder is `/ (root)`.
+
+## 10. Keep the documentation current
+
+For every meaningful edit to this root workspace:
+
+1. Append a dated entry to `DEVELOPMENT_REPORT.md` with the goal, files
+   changed, and checks actually run. Keep historical entries intact.
+2. Add a concise user-facing summary to `CHANGELOG.md` for content or feature
+   changes.
+3. Update this guide if the run, editing, contact-form, deployment, or
+   submission steps changed.
+4. Update `README.md` if features, project structure, dependencies, or known
+   placeholders changed.
+
+Do not record a test, browser check, or deployment as successful unless it was
+actually performed. Search `js/data.js` and `index.html` for `[FILL ME]` before
+publishing; the HTML contains the no-JavaScript fallback and some additional
+metadata placeholders.

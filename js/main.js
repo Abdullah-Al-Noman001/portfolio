@@ -245,6 +245,13 @@
             '<span class="project-category">' + esc(p.category || "") + "</span>" +
             icon(p.icon || "folder") +
           "</div>";
+      var projectLinks = [];
+      if (p.demoUrl && p.demoUrl !== "#") {
+        projectLinks.push('<a class="project-link" href="' + esc(p.demoUrl) + '" target="_blank" rel="noopener noreferrer">' + icon("external") + "Live Demo</a>");
+      }
+      if (p.codeUrl && p.codeUrl !== "#") {
+        projectLinks.push('<a class="project-link project-link--code" href="' + esc(p.codeUrl) + '" target="_blank" rel="noopener noreferrer">' + icon("github") + "Code</a>");
+      }
       return (
         '<div class="project-item reveal ' + delayClass(i) + '">' +
           '<article class="project-card glass-card">' +
@@ -257,10 +264,7 @@
                   return '<li class="tech-tag tech-tag--' + ((j % 3) + 1) + '">' + esc(t) + "</li>";
                 }).join("") +
               "</ul>" +
-              '<div class="project-links">' +
-                '<a class="project-link" href="' + esc(p.demoUrl || "#") + '" target="_blank" rel="noopener noreferrer">' + icon("external") + "Live Demo</a>" +
-                '<a class="project-link project-link--code" href="' + esc(p.codeUrl || "#") + '" target="_blank" rel="noopener noreferrer">' + icon("github") + "Code</a>" +
-              "</div>" +
+              (projectLinks.length ? '<div class="project-links">' + projectLinks.join("") + "</div>" : "") +
             "</div>" +
           "</article>" +
         "</div>"
