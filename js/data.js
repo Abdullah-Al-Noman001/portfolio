@@ -82,7 +82,7 @@ const PORTFOLIO_DATA = {
     //           "assets/cv/Abdullah_Al_Noman_CV.pdf"
     cvUrl: "[FILL ME]",
     paragraphs: [
-      "Software engineering student at Daffodil International University, driven to create impactful and innovative solutions. Interested in Web Development, Game Development, and AI. Committed to continuous learning, collaboration, and a growth mindset. Eager to contribute to real-world projects.",
+      "I'm a Software Engineering student who enjoys understanding how things work under the hood and turning that curiosity into code. I'm drawn to problem-solving, systems, and game development, and I learn best by building. My goal is to become a well-rounded software engineer who creates reliable, practical software—from applications to games.",
     ],
     // Quick facts shown under the bio (icon names come from PORTFOLIO_ICONS)
     facts: [
