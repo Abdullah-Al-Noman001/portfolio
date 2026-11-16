@@ -57,7 +57,7 @@ const PORTFOLIO_DATA = {
       "Research & Development",
     ],
     tagline: "SOFTWARE ENGINEERING STUDENT | GAME DEVELOPMENT ENTHUSIAST",
-    location: "DSC, Savar, Dhaka, Bangladesh",
+    location: "Savar, Dhaka, Bangladesh",
     primaryButton: { label: "View My Work", href: "#projects" },
     secondaryButton: { label: "Get In Touch", href: "#contact" },
   },
@@ -86,7 +86,7 @@ const PORTFOLIO_DATA = {
     ],
     // Quick facts shown under the bio (icon names come from PORTFOLIO_ICONS)
     facts: [
-      { icon: "pin", label: "Location", value: "DSC, Savar, Dhaka, Bangladesh" },
+      { icon: "pin", label: "Location", value: "Savar, Dhaka, Bangladesh" },
       { icon: "graduation", label: "University", value: "Daffodil International University" },
       { icon: "book", label: "Program", value: "B.Sc. in Software Engineering" },
     ],
@@ -335,7 +335,7 @@ const PORTFOLIO_DATA = {
      ------------------------------------------------------------------ */
   contact: {
     email: "abdullahspacebd@gmail.com",
-    location: "DSC, Savar, Dhaka, Bangladesh",
+    location: "Savar, Dhaka, Bangladesh",
     university: "Daffodil International University",
     formspreeId: "[FILL ME]",
     intro: "Have a question, an opportunity, or just want to say hi? My inbox is always open — I'll get back to you as soon as I can.",

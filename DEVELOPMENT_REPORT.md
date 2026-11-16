@@ -422,3 +422,11 @@ it was performed.
   Programming, and Research & Development. Updated the changelog.
 - **Checks performed:** Compared the configured phrase list with the requested
   topics and ran `git diff --check`.
+
+### 2026-11-16 — Simplify location labels
+
+- **Changes:** Removed the “DSC” prefix from the location in the mobile menu,
+  hero, About facts, and contact section. The location now reads “Savar, Dhaka,
+  Bangladesh.” Updated the changelog.
+- **Checks performed:** Searched the workspace for remaining “DSC” location
+  references and ran `git diff --check`.
