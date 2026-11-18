@@ -5,7 +5,8 @@ This file highlights notable updates to the portfolio. It focuses on changes to 
 ## 2026-11-18 — Documentation update
 
 - Revised the project overview, setup guide, development report, and changelog for a clearer and more professional presentation.
-- Aligned the documentation with the current CV file and contact-form fallback behavior.
+- Added the two collaborative project demo links and documented the social-preview URL and profile-image size as possible follow-up improvements.
+- Aligned the documentation with the current CV file, contact-form fallback, accessibility features, and verification history.
 
 ## 2026-11-16 — Portfolio content and features
 

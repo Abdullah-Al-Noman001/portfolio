@@ -9,8 +9,8 @@ This repository contains my personal portfolio website. It introduces my backgro
 
 - **[BS Card Game Bluff Tracker](https://github.com/Abdullah-Al-Noman001/bs-card-game-bluff-tracker)** — A browser-based companion for tracking players, claims, and possible bluffs during a game. It can save game data in the browser. [View the demo](https://abdullah-al-noman001.github.io/bs-card-game-bluff-tracker/).
 - **[Daily Habit Tracker](https://github.com/Abdullah-Al-Noman001/activity-tracker)** — A small web app for recording habits, reviewing activity heatmaps, and backing up or restoring data. [View the demo](https://abdullah-al-noman001.github.io/activity-tracker/).
-- **[Space Relics 3D](https://github.com/Abdullah-Al-Noman001/space-relics-3d_V2)** — A team-built Solar System explorer created for NASA Space Apps Challenge 2026, combining 3D models, mission information, and a historical timeline.
-- **[Bangladesh Monopoly](https://github.com/Abdullah-Al-Noman001/Bangla_monopoly)** — A Bangladesh-themed, real-time multiplayer Monopoly-style game developed in collaboration with a friend.
+- **[Space Relics 3D](https://github.com/Abdullah-Al-Noman001/space-relics-3d_V2)** — A team-built Solar System explorer created for NASA Space Apps Challenge 2026, combining 3D models, mission information, and a historical timeline. [View the demo](https://space-relics-3d-two.vercel.app/).
+- **[Bangladesh Monopoly](https://github.com/Abdullah-Al-Noman001/Bangla_monopoly)** — A Bangladesh-themed, real-time multiplayer Monopoly-style game developed in collaboration with a friend. [View the demo](https://arghor-monopoly.vercel.app/).
 
 ## What the site includes
 
@@ -18,7 +18,8 @@ This repository contains my personal portfolio website. It introduces my backgro
 - Profile, education, skills, project, activity, achievement, and certificate sections
 - Downloadable CV and links to project repositories and available demos
 - Contact form with field validation and a spam honeypot
-- Reduced-motion support and static page content when JavaScript is unavailable
+- Keyboard-accessible navigation, visible focus styles, and reduced-motion support
+- Static page content when JavaScript is unavailable
 
 ## Technology
 
