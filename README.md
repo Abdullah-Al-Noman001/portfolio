@@ -1,69 +1,55 @@
-# Abdullah Al Noman — Personal Portfolio
+# Abdullah Al Noman — Portfolio
 
-I built this portfolio to introduce myself, share the projects I’m working on, and document what I’m learning as a Software Engineering student and game development enthusiast. It includes my skills, education, recent certificates, activities, and ways to get in touch.
+This repository contains my personal portfolio website. It introduces my background as a Software Engineering student, highlights selected projects and activities, and provides ways to contact me.
 
-- **Portfolio:** [abdullah-al-noman001.github.io/portfolio](https://abdullah-al-noman001.github.io/portfolio/)
-- **GitHub:** [github.com/Abdullah-Al-Noman001](https://github.com/Abdullah-Al-Noman001)
+- **Live portfolio:** [abdullah-al-noman001.github.io/portfolio](https://abdullah-al-noman001.github.io/portfolio/)
+- **GitHub profile:** [github.com/Abdullah-Al-Noman001](https://github.com/Abdullah-Al-Noman001)
 
-## Featured Projects
+## Selected projects
 
-- **[BS Card Game Bluff Tracker](https://github.com/Abdullah-Al-Noman001/bs-card-game-bluff-tracker)** — I made this browser companion to help track players’ hands and claims during a BS card game, estimate bluffs, and save the game in the browser. [Live demo](https://abdullah-al-noman001.github.io/bs-card-game-bluff-tracker/)
-- **[Daily Habit Tracker](https://github.com/Abdullah-Al-Noman001/activity-tracker)** — A small app I built to log daily habits, review activity heatmaps, and back up or restore data. [Live demo](https://abdullah-al-noman001.github.io/activity-tracker/)
-- **[Space Relics 3D](https://github.com/Abdullah-Al-Noman001/space-relics-3d_V2)** — I worked with my team on this interactive Solar System explorer for NASA Space Apps Challenge 2026. It brings together 3D models, mission data, and a historical timeline.
-- **[Bangladesh Monopoly](https://github.com/Abdullah-Al-Noman001/Bangla_monopoly)** — I collaborated with a friend on this Bangladesh-themed, real-time multiplayer Monopoly-style game.
+- **[BS Card Game Bluff Tracker](https://github.com/Abdullah-Al-Noman001/bs-card-game-bluff-tracker)** — A browser-based companion for tracking players, claims, and possible bluffs during a game. It can save game data in the browser. [View the demo](https://abdullah-al-noman001.github.io/bs-card-game-bluff-tracker/).
+- **[Daily Habit Tracker](https://github.com/Abdullah-Al-Noman001/activity-tracker)** — A small web app for recording habits, reviewing activity heatmaps, and backing up or restoring data. [View the demo](https://abdullah-al-noman001.github.io/activity-tracker/).
+- **[Space Relics 3D](https://github.com/Abdullah-Al-Noman001/space-relics-3d_V2)** — A team-built Solar System explorer created for NASA Space Apps Challenge 2026, combining 3D models, mission information, and a historical timeline.
+- **[Bangladesh Monopoly](https://github.com/Abdullah-Al-Noman001/Bangla_monopoly)** — A Bangladesh-themed, real-time multiplayer Monopoly-style game developed in collaboration with a friend.
 
-## Portfolio Features
+## What the site includes
 
-- Responsive single-page layout with a mobile navigation menu
-- Animated hero section, project cards, skills, and education timeline
-- Recent certificates with links to the certificate files
-- Recent Achievements, plus research and competitive programming activities
-- Interests and hobbies
-- Contact form with input validation and spam honeypot
-- Reduced-motion support and static fallback content when JavaScript is unavailable
+- Responsive, single-page layout with mobile navigation
+- Profile, education, skills, project, activity, achievement, and certificate sections
+- Downloadable CV and links to project repositories and available demos
+- Contact form with field validation and a spam honeypot
+- Reduced-motion support and static page content when JavaScript is unavailable
 
-## Built With
+## Technology
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Inline SVG icons
+The site uses HTML, CSS, and browser-based JavaScript, with inline SVG icons. It does not require a framework, package installation, or build step.
 
-No framework, package installation, or build step is required.
-
-## Run Locally
-
-Open `index.html` in a browser, or serve the folder locally:
+To preview it locally, open `index.html` in a browser, or run a local server from the project folder:
 
 ```sh
 python -m http.server 8000
 ```
 
-Then visit [http://localhost:8000](http://localhost:8000).
+Then open [http://localhost:8000](http://localhost:8000).
 
-## Deploy
+## Deployment and contact form
 
-I host this static site with GitHub Pages. Updates are published from the repository’s configured Pages branch.
+The portfolio is hosted on GitHub Pages as a static site. It can also be served by another static hosting provider without a build command.
 
-## Contact Form
+The contact form sends submissions through Formspree when a form ID is configured in `js/data.js`. Until then, submitting the form opens a prefilled email draft; the visitor must send it from their email application. GitHub Pages does not process form submissions itself.
 
-The form checks the visitor’s name, email, and message, then sends the submission to Formspree when I configure a form ID in `js/data.js`. GitHub Pages is static and can’t process submissions by itself. Until I set up Formspree, submitting the form opens a prefilled email draft that the visitor can send from their email app.
-
-## Project Structure
+## Project files
 
 ```text
-index.html                      Page structure and static fallback
-css/style.css                   Layout, responsive styles, and visual theme
-js/data.js                      Portfolio content and configuration
-js/main.js                      Rendering, interactions, and form behavior
-assets/images/                  Profile photo and site images
-assets/certificates/             PDF certificates
-assets/images/certificates/     Image certificates
-README.md                       Project overview
-DEVELOPMENT_REPORT.md            Architecture notes and dated development log
-CHANGELOG.md                    Concise change history
+index.html                   Page structure and static fallback
+css/style.css                Layout, responsive styles, and visual theme
+js/data.js                   Portfolio content and configuration
+js/main.js                   Page rendering and interactive behavior
+assets/                      Images, certificates, and CV
+README.md                    Project overview
+SETUP.md                     Local setup, deployment, and submission guide
+DEVELOPMENT_REPORT.md        Project architecture and development record
+CHANGELOG.md                 Summary of notable changes
 ```
 
-## Updating Content
-
-Most portfolio content is in `js/data.js`. Update the matching data entry and keep the corresponding static fallback in `index.html` synchronized. Change visual styles in `css/style.css`. See the templates at the bottom of `js/data.js`.
+Most portfolio content is maintained in `js/data.js`. When changing major page content or structure, keep the static fallback in `index.html` aligned as well.
